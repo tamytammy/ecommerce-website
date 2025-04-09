@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce-Website</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/jQuery-v3-7-1.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="header-container">
+            <header class="header">
+                <div class="header__logo">
+                    <h1>Logo</h1>
+                </div>
+                <nav class="header__navbar">
+                    <ul class="header__navbar-link">
+                        <li class="nav-hover">最新商品</li>
+                        <li class="nav-hover" data-type="type1">特價專區</li>
+                        <div class="header-box box1" data-type="type1" style="display: none;">
+                            <ul>
+                                <li>三件250</li>
+                                <li>任選兩樣77折</li>
+                                <li>換季折扣系列</li>
+                            </ul>
+                        </div>
+                        <li class="nav-hover" data-type="type2">限定聯名</li>
+                        <div class="header-box box2" data-type="type2" style="display: none;">
+                            <ul>
+                                <li>Hello Kitty</li>
+                                <li>咒術廻戰</li>
+                            </ul>
+                        </div>
+                        <li class="nav-hover" data-type="type3">全部種類</li>
+                        <div class="header-box box3" data-type="type3" style="display: none;">
+                            <ul>
+                                <li>上衣</li>
+                                <li>內搭</li>
+                                <li>褲裝</li>
+                                <li>裙裝</li>
+                                <li>配件</li>
+                            </ul>
+                        </div>
+                        <li class="nav-hover">關於我們</li>
+                    </ul>
+                    <script>
+                        const navs = document.querySelectorAll('.nav-hover')
+                        const boxes = document.querySelectorAll('.header-box')
+
+                        navs.forEach(nav=>{
+                            nav.addEventListener('mouseenter',()=>{
+                                var type = nav.getAttribute('data-type')
+                                boxes.forEach(box=>{
+                                    if(box.getAttribute('data-type') === type){
+                                        box.style.display="block"
+                                    }else{
+                                        box.style.display="none"
+                                    }
+                                    box.addEventListener('mouseleave',()=>{
+                                        box.style.display="none"
+                                    })
+                                })
+                            })
+
+                        })
+                    </script>
+                </nav>
+                <div class="header__btns">
+                    <button>會員</button>
+                    <button>購物車</button>
+                </div>
+                
+            </header>
+        </div>
+        <div class="main-container">
+            <main class="main">
+                <aside class="aside">
+                    <ul>
+                        <li>三件250</li>
+                        <li>任選兩樣77折</li>
+                        <li>換季折扣系列</li>
+                        <li>Hello Kitty</li>
+                        <li>咒術廻戰</li>
+                        <li>上衣</li>
+                        <li>內搭</li>
+                        <li>褲裝</li>
+                        <li>裙裝</li>
+                        <li>配件</li>
+                    </ul>
+                </aside>
+                <section class="products">
+
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

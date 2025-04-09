@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "可愛貓咪抱枕",
+        "category": "居家生活",
+        "price": 299,
+        "image": "assets/images/cat_pillow.jpg",
+        "description": "柔軟舒適的貓咪抱枕，適合居家裝飾與休息。"
+    },
+    {
+        "id": 2,
+        "name": "遊戲滑鼠",
+        "category": "電子產品",
+        "price": 899,
+        "image": "assets/images/gaming_mouse.jpg",
+        "description": "高精度的遊戲滑鼠，適合各種遊戲場景。"
+    },
+    {
+        "id": 3,
+        "name": "設計師筆記本",
+        "category": "文具用品",
+        "price": 199,
+        "image": "assets/images/notebook.jpg",
+        "description": "高品質的筆記本，適合創意設計與筆記。"
+    }
+]
