@@ -1,0 +1,54 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .login-container {
+  width: 330px;
+  margin: 0 auto;
+  border: 1px solid black;
+  text-align: center;
+}
+.main-container .login-container .form-group {
+  border: 1px solid black;
+  padding: 10px 0;
+}
+.main-container .login-container .form-group .formBox label {
+  display: inline-block;
+  padding: 5px 0;
+}
+.main-container .login-container .form-group .formBox button {
+  display: inline-block;
+  outline: none;
+  border: 1px solid black;
+  padding: 5px 30px;
+  background-color: transparent;
+}
+.main-container .login-container .form-group .formBox:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main-container .reg-container {
+  width: 330px;
+  margin: 0 auto;
+  border: 1px solid black;
+  text-align: center;
+}
+.main-container .reg-container .form-group {
+  padding: 10px 0;
+}
+.main-container .reg-container .form-group label {
+  display: inline-block;
+  padding: 5px 0;
+}
+.main-container .reg-container .form-group button {
+  display: inline-block;
+  outline: none;
+  border: 1px solid black;
+  padding: 5px 30px;
+  background-color: transparent;
+}
+
+/*# sourceMappingURL=member.css.map */

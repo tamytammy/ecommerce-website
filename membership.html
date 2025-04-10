@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>會員登入</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/member.css">
     <script src="./assets/js/jQuery-v3-7-1.js"></script>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <div class="header-container">
             <header class="header">
                 <div class="header__logo">
-                    <h1>Logo</h1>
+                    <h1><a href="./index.html">Logo</a></h1>
                 </div>
                 <nav class="header__navbar">
                     <ul class="header__navbar-link">
@@ -67,20 +68,89 @@
                     </script>
                 </nav>
                 <div class="header__btns">
-                    <button>會員</button>
-                    <button>購物車</button>
+                    <button type="button" onclick="location.href='/membership.html'">會員</button>
+                    <button type="button" onclick="location.href='/cart.html'">購物車</button>
                 </div>
                 
             </header>
         </div>
         <div class="main-container">
             <main class="main">
-
+                <div class="login-container">
+                    <div class="form-group">
+                        <form>
+                            <div class="formBox">
+                                <label for="username">
+                                    帳號
+                                    <input type="text">
+                                </label>
+                            </div>
+                            <div class="formBox">
+                                <label for="username">
+                                    密碼
+                                    <input type="password">
+                                </label>
+                            </div>
+                            <div class="formBox">
+                                <button>
+                                    <span>登入</span>
+                                </button>
+                                <div class="formBox-reg">
+                                    <span>立即註冊</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="reg-container">
+                    <div class="form-group">
+                        <form>
+                            <div class="formBox">
+                                <label for="username">
+                                    帳號
+                                    <input type="text">
+                                </label>
+                            </div>
+                            <div class="formBox">
+                                <label for="username">
+                                    密碼
+                                    <input type="password">
+                                </label>
+                            </div>
+                            <div class="formBox">
+                                <label for="username">
+                                    確認密碼
+                                    <input type="password">
+                                </label>
+                            </div>
+                            <div class="formBox">
+                                <label for="username">
+                                    Email
+                                    <input type="email">
+                                </label>
+                            </div>
+                            <div class="formBox">
+                                <label for="username">
+                                    手機
+                                    <input type="phone">
+                                </label>
+                            </div>
+                            <div class="formBox">
+                                <button>
+                                    <span>確認</span>
+                                </button>
+                                <div class="formBox-reg">
+                                    <span>立即註冊</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </main>
         </div>
         <div class="footer-container">
             <footer class="footer">
-                This is footer
+                <h4>THIS IS FOOTER</h4>
             </footer>
         </div>
     </div>

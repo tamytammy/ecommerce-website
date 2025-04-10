@@ -9,8 +9,6 @@ body{
 }
 .header-container{
     width: 100%;
-    background-color: rgb(169, 169, 169);
-    // filter: blur(5px);
     .header{
         width: auto;
         height: 90px;
@@ -21,13 +19,11 @@ body{
         z-index: 1;
         backdrop-filter: blur(10px);
         &__logo{
-            border: 1px solid pink;
             h1{
                 cursor: pointer;
             }
         }
         &__navbar{
-            border: 1px solid blue;
             position: relative;
             &-link{
                 display: flex;
@@ -45,7 +41,6 @@ body{
                     position: absolute;
                     top: 40px;
                     width: 80px;
-                    border: 1px solid #000;
                     box-shadow: 0 10px 60px rgba(#000,.25);
                 }
                 .box1{
@@ -60,7 +55,6 @@ body{
             }
         }
         &__btns{
-            border: 1px solid pink;
             button{
                 outline: none;
                 border: none;
@@ -98,14 +92,21 @@ body{
         }
         .products{
             width: 900px;
-            border: 1px solid #000;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
             .product-box{
-                width: 200px;
-                height: 300px;
-                border: 1px solid red;
+                padding: 10px 0;
+                &__img{
+                    width: 200px;
+                    height: 200px;
+                    border: 1px solid red;
+                }
+                &__text{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
             }
         }
     }
