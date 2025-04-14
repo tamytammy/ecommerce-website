@@ -10,11 +10,16 @@
     .form-group{
         border: 1px solid black;
         padding: 10px 0;
+        span{
+                color: red;
+                font-size: 12px;
+            }
         .formBox{
             label{
                 display: inline-block;
                 padding: 5px 0;
             }
+            
             button{
                 display: inline-block;
                 outline: none;
@@ -41,6 +46,10 @@
             label{
                 display: inline-block;
                 padding: 5px 0;
+            }
+            span{
+                color: red;
+                font-size: 12px;
             }
             button{
                 display: inline-block;

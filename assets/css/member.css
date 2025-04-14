@@ -13,6 +13,10 @@
   border: 1px solid black;
   padding: 10px 0;
 }
+.main-container .login-container .form-group span {
+  color: red;
+  font-size: 12px;
+}
 .main-container .login-container .form-group .formBox label {
   display: inline-block;
   padding: 5px 0;
@@ -42,6 +46,10 @@
 .main-container .reg-container .form-group label {
   display: inline-block;
   padding: 5px 0;
+}
+.main-container .reg-container .form-group span {
+  color: red;
+  font-size: 12px;
 }
 .main-container .reg-container .form-group button {
   display: inline-block;
