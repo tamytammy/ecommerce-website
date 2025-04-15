@@ -22,5 +22,238 @@
         "price": 199,
         "image": "assets/images/notebook.jpg",
         "description": "高品質的筆記本，適合創意設計與筆記。"
-    }
+    },
+    {
+    "id": 2,
+    "name": "復古牛仔外套",
+    "category": "衣著",
+    "price": 1280,
+    "image": "assets/images/denim_jacket.jpg",
+    "description": "經典復古風格牛仔外套，百搭又時尚，適合日常穿搭。"
+  },
+  {
+    "id": 3,
+    "name": "素色長袖T恤",
+    "category": "衣著",
+    "price": 450,
+    "image": "assets/images/plain_tshirt.jpg",
+    "description": "柔軟舒適的素色長袖T恤，多種顏色可選，適合各種搭配。"
+  },
+  {
+    "id": 4,
+    "name": "高腰休閒褲",
+    "category": "衣著",
+    "price": 890,
+    "image": "assets/images/highwaist_pants.jpg",
+    "description": "設計簡約的高腰褲，強調修身剪裁，穿著輕鬆又顯瘦。"
+  },
+  {
+    "id": 5,
+    "name": "輕便連帽外套",
+    "category": "衣著",
+    "price": 999,
+    "image": "assets/images/hooded_jacket.jpg",
+    "description": "適合春秋季節穿著的連帽外套，防風又舒適。"
+  },
+  {
+    "id": 6,
+    "name": "日系格紋襯衫",
+    "category": "衣著",
+    "price": 720,
+    "image": "assets/images/plaid_shirt.jpg",
+    "description": "日系風格格紋襯衫，質感細膩，營造溫柔氣質。"
+  },
+  {
+    "id": 7,
+    "name": "休閒百搭牛仔褲",
+    "category": "衣著",
+    "price": 980,
+    "image": "assets/images/jeans.jpg",
+    "description": "舒適實穿的牛仔褲，經典設計，適合各種日常搭配。"
+  },
+  {
+    "id": 8,
+    "name": "夏季透氣短袖襯衫",
+    "category": "衣著",
+    "price": 620,
+    "image": "assets/images/summer_shirt.jpg",
+    "description": "輕薄布料製成的短袖襯衫，讓你在炎熱天氣也能清爽自在。"
+  },
+  {
+    "id": 9,
+    "name": "可愛圖案連帽T",
+    "category": "衣著",
+    "price": 790,
+    "image": "assets/images/hoodie.jpg",
+    "description": "帶有俏皮圖案的連帽T，展現你的獨特風格與活力。"
+  },
+  {
+    "id": 10,
+    "name": "質感針織背心",
+    "category": "衣著",
+    "price": 560,
+    "image": "assets/images/knit_vest.jpg",
+    "description": "質地柔軟的針織背心，搭配襯衫或洋裝都別具風味。"
+  },
+  {
+    "id": 11,
+    "name": "修身西裝外套",
+    "category": "衣著",
+    "price": 1680,
+    "image": "assets/images/blazer.jpg",
+    "description": "適合正式場合的修身西裝外套，剪裁俐落展現專業氣質。"
+  },
+  {
+    "id": 12,
+    "name": "文青風寬褲",
+    "category": "衣著",
+    "price": 880,
+    "image": "assets/images/wide_pants.jpg",
+    "description": "寬鬆舒適的褲型設計，穿出文青風的輕鬆感。"
+  },
+  {
+    "id": 13,
+    "name": "百摺中長裙",
+    "category": "衣著",
+    "price": 750,
+    "image": "assets/images/pleated_skirt.jpg",
+    "description": "經典百摺設計的中長裙，展現優雅氣質。"
+  },
+  {
+    "id": 14,
+    "name": "親膚長袖高領毛衣",
+    "category": "衣著",
+    "price": 850,
+    "image": "assets/images/turtleneck.jpg",
+    "description": "保暖高領設計，適合秋冬季節的溫暖選擇。"
+  },
+  {
+    "id": 15,
+    "name": "寬鬆休閒帽T",
+    "category": "衣著",
+    "price": 690,
+    "image": "assets/images/loose_hoodie.jpg",
+    "description": "街頭風格寬鬆帽T，隨興穿搭也能有型。"
+  },
+  {
+    "id": 16,
+    "name": "可愛花邊短襪組",
+    "category": "衣著",
+    "price": 199,
+    "image": "assets/images/cute_socks.jpg",
+    "description": "三雙組可愛風格花邊短襪，增添搭配趣味。"
+  },
+  {
+    "id": 17,
+    "name": "條紋V領針織衫",
+    "category": "衣著",
+    "price": 720,
+    "image": "assets/images/striped_knit.jpg",
+    "description": "條紋V領設計，輕盈又舒適，適合四季穿搭。"
+  },
+  {
+    "id": 18,
+    "name": "機能防風外套",
+    "category": "衣著",
+    "price": 1290,
+    "image": "assets/images/windbreaker.jpg",
+    "description": "防風防潑水材質，機能性與外觀兼具。"
+  },
+  {
+    "id": 19,
+    "name": "素面圓領T恤",
+    "category": "衣著",
+    "price": 390,
+    "image": "assets/images/basic_tshirt.jpg",
+    "description": "經典素色設計，輕鬆搭配任何下身。"
+  },
+  {
+    "id": 20,
+    "name": "文藝風圓裙",
+    "category": "衣著",
+    "price": 810,
+    "image": "assets/images/art_skirt.jpg",
+    "description": "自然飄逸的圓裙設計，走動間帶出詩意律動感。"
+  },
+  {
+    "id": 21,
+    "name": "細肩帶碎花洋裝",
+    "category": "衣著",
+    "price": 920,
+    "image": "assets/images/flower_dress.jpg",
+    "description": "碎花圖案清新甜美，適合假日出遊。"
+  },
+  {
+    "id": 22,
+    "name": "氣質雪紡襯衫",
+    "category": "衣著",
+    "price": 790,
+    "image": "assets/images/chiffon_shirt.jpg",
+    "description": "輕柔雪紡布料，帶有微微透膚感，氣質滿分。"
+  },
+  {
+    "id": 23,
+    "name": "簡約風棉麻上衣",
+    "category": "衣著",
+    "price": 670,
+    "image": "assets/images/cotton_linen_top.jpg",
+    "description": "自然棉麻材質，簡單耐看又透氣。"
+  },
+  {
+    "id": 24,
+    "name": "素色高腰短褲",
+    "category": "衣著",
+    "price": 490,
+    "image": "assets/images/highwaist_shorts.jpg",
+    "description": "高腰設計修飾比例，夏季必備的百搭單品。"
+  },
+  {
+    "id": 25,
+    "name": "潮流印花T恤",
+    "category": "衣著",
+    "price": 620,
+    "image": "assets/images/graphic_tshirt.jpg",
+    "description": "印花設計潮流感十足，讓你走在時尚前端。"
+  },
+  {
+    "id": 26,
+    "name": "針織開襟外套",
+    "category": "衣著",
+    "price": 980,
+    "image": "assets/images/knit_cardigan.jpg",
+    "description": "針織材質舒適保暖，適合室內外皆穿著。"
+  },
+  {
+    "id": 27,
+    "name": "歐系設計寬版襯衫",
+    "category": "衣著",
+    "price": 1100,
+    "image": "assets/images/european_shirt.jpg",
+    "description": "歐風設計的寬版剪裁，穿出不同凡響的氣場。"
+  },
+  {
+    "id": 28,
+    "name": "多功能健身運動服",
+    "category": "衣著",
+    "price": 1350,
+    "image": "assets/images/sport_outfit.jpg",
+    "description": "透氣吸汗材質，運動時保持乾爽。"
+  },
+  {
+    "id": 29,
+    "name": "休閒棉質吊帶褲",
+    "category": "衣著",
+    "price": 880,
+    "image": "assets/images/overall.jpg",
+    "description": "可愛休閒風格吊帶褲，輕鬆打造童趣造型。"
+  },
+  {
+    "id": 30,
+    "name": "素面短版運動背心",
+    "category": "衣著",
+    "price": 399,
+    "image": "assets/images/sport_bra.jpg",
+    "description": "簡約設計短版背心，適合瑜伽、健身等運動穿著。"
+  }
+
 ]
