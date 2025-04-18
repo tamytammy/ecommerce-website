@@ -74,7 +74,7 @@ function loginUI(username){
     loginDisplayName.textContent = username
 }
 function logout(){
-    removeItem(loginUsername)
+    removeItem('loggedInStatus')
     register.style.display = 'block'
     login.style.display = 'block'
     logined.style.display = 'none'
