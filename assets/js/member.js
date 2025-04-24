@@ -6,6 +6,7 @@ const loginForm = document.getElementById('loginForm');
 const regText = document.querySelector('.registerText')
 const loginText = document.querySelector('.loginText')
 
+// 註冊
 regForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     
@@ -39,7 +40,7 @@ regForm.addEventListener('submit',(e)=>{
     regForm.reset();
     return
 })
-
+// 登入
 loginForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     const loginUsername = document.getElementById('loginUsername').value.trim()
@@ -56,10 +57,11 @@ loginForm.addEventListener('submit',(e)=>{
         return
     }
     setItem('loggedInStatus',loginUsername)
+    alert('登入成功')
+    window.location.href='./member.html'
     loginUI(loginUsername)
     loginForm.reset()
-    alert('登入成功')
-    return
+    
     
 })
 

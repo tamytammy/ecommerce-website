@@ -2,61 +2,77 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-.main-container .login-container {
+.main-container .login-display {
+  border-bottom: 2px solid #ccc;
+}
+.main-container .login {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main-container .login .login-container {
   width: 330px;
   margin: 0 auto;
-  border: 1px solid black;
   text-align: center;
 }
-.main-container .login-container .form-group {
-  border: 1px solid black;
+.main-container .login .login-container .form-group {
   padding: 10px 0;
 }
-.main-container .login-container .form-group span {
+.main-container .login .login-container .form-group span {
   color: red;
   font-size: 12px;
 }
-.main-container .login-container .form-group .formBox label {
+.main-container .login .login-container .form-group .formBox label {
   display: inline-block;
   padding: 5px 0;
 }
-.main-container .login-container .form-group .formBox button {
-  display: inline-block;
-  outline: none;
-  border: 1px solid black;
-  padding: 5px 30px;
-  background-color: transparent;
-}
-.main-container .login-container .form-group .formBox:last-child {
+.main-container .login .login-container .form-group .formBox:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.main-container .reg-container {
+.main-container .login .login-container .form-group button {
+  outline: none;
+  border: 1px solid #000;
+  background-color: transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.main-container .login .reg-container {
   width: 330px;
   margin: 0 auto;
-  border: 1px solid black;
   text-align: center;
 }
-.main-container .reg-container .form-group {
+.main-container .login .reg-container .form-group {
   padding: 10px 0;
 }
-.main-container .reg-container .form-group label {
+.main-container .login .reg-container .form-group label {
   display: inline-block;
   padding: 5px 0;
 }
-.main-container .reg-container .form-group span {
+.main-container .login .reg-container .form-group span {
   color: red;
   font-size: 12px;
 }
-.main-container .reg-container .form-group button {
+.main-container .login .reg-container .form-group button {
   display: inline-block;
   outline: none;
   border: 1px solid black;
   padding: 5px 30px;
   background-color: transparent;
+  cursor: pointer;
+}
+.main-container .member {
+  background-color: #fff;
+  width: 60%;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  margin: 50px 0;
 }
 
 /*# sourceMappingURL=member.css.map */

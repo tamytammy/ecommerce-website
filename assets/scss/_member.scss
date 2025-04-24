@@ -2,45 +2,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .login-container{
-    width: 330px;
-    margin: 0 auto;
-    border: 1px solid black;
-    text-align: center;
-    .form-group{
-        border: 1px solid black;
-        padding: 10px 0;
-        span{
+    flex-direction: column;
+    .login-display{
+        border-bottom: 2px solid #ccc;
+    }
+    .login{
+        justify-content: center;
+        flex-wrap: wrap;
+        .login-container{
+            width: 330px;
+            margin: 0 auto;
+            text-align: center;
+                .form-group{
+                    padding: 10px 0;
+                    span{
                 color: red;
                 font-size: 12px;
-            }
-        .formBox{
-            label{
+                    }
+                    .formBox{
+                        label{
                 display: inline-block;
                 padding: 5px 0;
-            }
-            
-            button{
-                display: inline-block;
-                outline: none;
-                border: 1px solid black;
-                padding: 5px 30px;
-                background-color: transparent;
-            }
-            &:last-child{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap:10px;
-            }
+                            }
+                    &:last-child{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap:10px;
+                        }
+                    }
+                    button{
+                        outline: none;
+                        border: 1px solid #000;
+                        background-color: transparent;
+                        padding: 5px 10px;
+                        cursor: pointer;
+                    }
+                }
         }
-    }
-    }
-    .reg-container{
+        .reg-container{
         width: 330px;
-    margin: 0 auto;
-    border: 1px solid black;
-    text-align: center;
+        margin: 0 auto;
+        text-align: center;
         .form-group{
             padding: 10px 0;
             label{
@@ -57,7 +60,20 @@
                 border: 1px solid black;
                 padding: 5px 30px;
                 background-color: transparent;
+                cursor: pointer;
             }
         }
+        }
     }
+    .member{
+        background-color: #fff;
+        width: 60%;
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+        margin: 50px 0;
+    }
+    
 }

@@ -55,7 +55,7 @@ $(document).ready(function(){
                 let id = item.id
                 let img = item.image
                 if(!img){
-                    img = './assets/img/notfount.png'
+                    img = './assets/img/notfound.png'
                 }
                 let html = ''
                 html = "<div class='product-box'><div class='product-box__img' style='overflow:hidden;text-align:center;'><a href='./product.html?id="+ id +"'><img src='"+ img +"' style='width:auto;height:100%;cursor:pointer'></a></div><div class='product-box__text'><p class='product-box__text-name'>"+ name +"</p><div class='product-box__text-detail'><span class='price'>$"+ price +"</span></div></div><div class='addCart-btn' data-id='"+ id +"'><span>+</span></div></div>"
@@ -104,7 +104,7 @@ $(document).ready(function(){
     function productDetail(){
         const urlId = new URLSearchParams(window.location.search).get('id')
         const product = allData.find(item => item.id == urlId)
-
+        
         $('.product-img').attr('src', product.image)
         $('.product-name').text(product.name)
         $('.product-info').text(product.description)

@@ -4,7 +4,7 @@
         "name": "可愛貓咪抱枕",
         "category": "special",
         "price": 299,
-        "image": "assets/images/cat_pillow.jpg",
+        "image": "assets/img/1.jpg",
         "description": "柔軟舒適的貓咪抱枕，適合居家裝飾與休息。"
     },
     {
@@ -12,7 +12,7 @@
         "name": "遊戲滑鼠",
         "category": "special",
         "price": 899,
-        "image": "assets/images/gaming_mouse.jpg",
+        "image": "assets/img/2.jpg",
         "description": "高精度的遊戲滑鼠，適合各種遊戲場景。"
     },
     {
@@ -20,7 +20,7 @@
         "name": "設計師筆記本",
         "category": "special",
         "price": 199,
-        "image": "assets/images/notebook.jpg",
+        "image": "assets/img/3.jpg",
         "description": "高品質的筆記本，適合創意設計與筆記。"
     },
     {
@@ -28,7 +28,7 @@
     "name": "復古牛仔外套",
     "category": "special",
     "price": 1280,
-    "image": "assets/images/denim_jacket.jpg",
+    "image": "assets/img/4.jpg",
     "description": "經典復古風格牛仔外套，百搭又時尚，適合日常穿搭。"
   },
   {
@@ -36,7 +36,7 @@
     "name": "素色長袖T恤",
     "category": "sale",
     "price": 450,
-    "image": "assets/images/plain_tshirt.jpg",
+    "image": "./assets/img/4.jpg",
     "description": "柔軟舒適的素色長袖T恤，多種顏色可選，適合各種搭配。"
   },
   {
@@ -44,7 +44,7 @@
     "name": "高腰休閒褲",
     "category": "sale",
     "price": 890,
-    "image": "assets/images/highwaist_pants.jpg",
+    "image": "assets/img/5.jpg",
     "description": "設計簡約的高腰褲，強調修身剪裁，穿著輕鬆又顯瘦。"
   },
   {
@@ -52,7 +52,7 @@
     "name": "輕便連帽外套",
     "category": "sale",
     "price": 999,
-    "image": "assets/images/hooded_jacket.jpg",
+    "image": "assets/img/6.jpg",
     "description": "適合春秋季節穿著的連帽外套，防風又舒適。"
   },
   {
@@ -60,7 +60,7 @@
     "name": "日系格紋襯衫",
     "category": "sale",
     "price": 720,
-    "image": "assets/images/plaid_shirt.jpg",
+    "image": "assets/img/7.png",
     "description": "日系風格格紋襯衫，質感細膩，營造溫柔氣質。"
   },
   {
@@ -68,7 +68,7 @@
     "name": "休閒百搭牛仔褲",
     "category": "sale",
     "price": 980,
-    "image": "assets/images/jeans.jpg",
+    "image": "",
     "description": "舒適實穿的牛仔褲，經典設計，適合各種日常搭配。"
   },
   {
@@ -76,7 +76,7 @@
     "name": "夏季透氣短袖襯衫",
     "category": "sale",
     "price": 620,
-    "image": "./assets/img/10.jpeg",
+    "image": "",
 
     "description": "輕薄布料製成的短袖襯衫，讓你在炎熱天氣也能清爽自在。"
   },
@@ -85,7 +85,7 @@
     "name": "可愛圖案連帽T",
     "category": "latest",
     "price": 790,
-    "image": "assets/images/hoodie.jpg",
+    "image": "",
     "description": "帶有俏皮圖案的連帽T，展現你的獨特風格與活力。"
   },
   {
@@ -93,7 +93,7 @@
     "name": "質感針織背心",
     "category": "latest",
     "price": 560,
-    "image": "assets/images/knit_vest.jpg",
+    "image": "assets/img/24.png",
     "description": "質地柔軟的針織背心，搭配襯衫或洋裝都別具風味。"
   },
   {
@@ -101,7 +101,7 @@
     "name": "修身西裝外套",
     "category": "latest",
     "price": 1680,
-    "image": "assets/images/blazer.jpg",
+    "image": "assets/img/25.png",
     "description": "適合正式場合的修身西裝外套，剪裁俐落展現專業氣質。"
   },
   {
@@ -109,7 +109,7 @@
     "name": "文青風寬褲",
     "category": "latest",
     "price": 880,
-    "image": "assets/images/wide_pants.jpg",
+    "image": "assets/img/24.png",
     "description": "寬鬆舒適的褲型設計，穿出文青風的輕鬆感。"
   },
   {
@@ -117,7 +117,7 @@
     "name": "百摺中長裙",
     "category": "latest",
     "price": 750,
-    "image": "assets/images/pleated_skirt.jpg",
+    "image": "assets/img/29.jpg",
     "description": "經典百摺設計的中長裙，展現優雅氣質。"
   },
   {
@@ -125,7 +125,7 @@
     "name": "親膚長袖高領毛衣",
     "category": "latest",
     "price": 850,
-    "image": "./assets/img/16.jpeg",
+    "image": "./assets/img/30.jpg",
     "description": "保暖高領設計，適合秋冬季節的溫暖選擇。"
   },
   {
@@ -133,7 +133,7 @@
     "name": "寬鬆休閒帽T",
     "category": "latest",
     "price": 690,
-  "image": "./assets/img/17.jpeg",
+  "image": "./assets/img/27.jpg",
     "description": "街頭風格寬鬆帽T，隨興穿搭也能有型。"
   },
   {
@@ -141,7 +141,7 @@
     "name": "可愛花邊短襪組",
     "category": "latest",
     "price": 199,
-    "image": "assets/images/cute_socks.jpg",
+    "image": "assets/img/34.jpg",
     "description": "三雙組可愛風格花邊短襪，增添搭配趣味。"
   },
   {
@@ -149,7 +149,7 @@
     "name": "條紋V領針織衫",
     "category": "latest",
     "price": 720,
-    "image": "./assets/img/19.jpeg",
+    "image": "./assets/img/29.jpg",
     "description": "條紋V領設計，輕盈又舒適，適合四季穿搭。"
   },
   {
@@ -157,7 +157,7 @@
     "name": "機能防風外套",
     "category": "latest",
     "price": 1290,
-    "image": "assets/images/windbreaker.jpg",
+    "image": "assets/img/31.jpg",
     "description": "防風防潑水材質，機能性與外觀兼具。"
   },
   {
@@ -165,7 +165,7 @@
     "name": "素面圓領T恤",
     "category": "latest",
     "price": 390,
-    "image": "assets/images/basic_tshirt.jpg",
+    "image": "assets/img/28.jpg",
     "description": "經典素色設計，輕鬆搭配任何下身。"
   },
   {
@@ -173,7 +173,7 @@
     "name": "文藝風圓裙",
     "category": "latest",
     "price": 810,
-    "image": "./assets/img/22.jpeg",
+    "image": "./assets/img/1.jpg",
     "description": "自然飄逸的圓裙設計，走動間帶出詩意律動感。"
   },
   {
@@ -181,7 +181,7 @@
     "name": "細肩帶碎花洋裝",
     "category": "latest",
     "price": 920,
-    "image": "assets/images/flower_dress.jpg",
+    "image": "assets/img/4.jpg",
     "description": "碎花圖案清新甜美，適合假日出遊。"
   },
   {
