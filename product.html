@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce-Website</title>
+    <title>Ecommerce-Website : Product</title>
     <link rel="stylesheet" href="./assets/css/_style.css">
     <link rel="stylesheet" href="./assets/css/product.css">
-    <link rel="stylesheet" href="./assets/css/member.css">
+    <link rel="stylesheet" href="./assets/css/check.css">
     <script src="./assets/js/jQuery-v3-7-1.js"></script>
 </head>
 <body>
@@ -76,7 +76,7 @@
             </header>
         </div>
         <div class="main-container">
-            <main class="main">
+            <main class="main" style="display: none;">
                 <aside class="aside">
                     <ul class="category-bar">
                         <li data-category="all" class="filter-btn">全部商品</li>
@@ -92,15 +92,81 @@
                     </div>
                 </div>
             </main>
-        </div>
+            <main class="product">
+                <div class="product__container">
+                    <div class="product__container-top">
+                        <div class="top__img">
+                            <img class="product-img" src="./assets/img/12.jpg" alt="商品圖示">
+                        </div>
+                        <div class="top__text">
+                            <h3 class="product-name">商品名稱</h3>
+                            <div class="top__text-info">
+                                <p class="product-info">商品內容</p>
+                                <span>new</span>
+                            </div>
+                            <div class="top__text-amount">
+                                <label for="amount">數量</label>
+                                <input type="number" data-list="number">
+                                <datalist id="number">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </datalist>
+                                <span>$ <span class="product-price"></span></span>
+                            </div>
+                            <button type="button" class="addCart-btn product-id" data-id="">加入購物車</button>
+                        </div>
+                    </div>
+                    <div class="product__container-bottom">
+                        <div class="bottom-tab">
+                            <ul>
+                                <li class="tabs active" data-tab="tab1">商品敘述</li>
+                                <li class="tabs" data-tab="tab2">詳細規格</li>
+                                <li class="tabs" data-tab="tab3">買家評論</li>
+                            </ul>
+                        </div>
+                        <div class="bottom-content">
+                                <div class="contents on" data-tab="tab1">tab1</div>
+                                <div class="contents" data-tab="tab2">tab2</div>
+                                <div class="contents" data-tab="tab3">tab3</div>
+                        </div>
+                        <script>
+                            const tabs = document.querySelectorAll('.tabs')
+                            const contents = document.querySelectorAll('.contents')
+                            tabs.forEach(tab=>{
+                                
+                                tab.addEventListener('click',()=>{
+                                    tabs.forEach(tab=>{
+                                        tab.classList.remove('active')
+                                    })
+                                    tab.classList.add('active')
+                                    contents.forEach(content=>{
+                                        content.classList.remove('on')
+                                    })
+                                    contents.forEach(content=>{
+                                        if(content.getAttribute('data-tab') === tab.getAttribute('data-tab')){
+                                            content.classList.add('on')
+                                        }
+                                    })
+                                })
+                            })
+                        </script>
+                    </div>
+                </div>
+            </main>
+        
         <div class="footer-container">
             <footer class="footer">
                 <h4>THIS IS FOOTER</h4>
             </footer>
         </div>
     </div>
-    <script src="./assets/js/app.js"></script>
-    <script src="./assets/js/member.js"></script>
-    <script src="./assets/js/cart.js"></script>
+<script src='./assets/js/app.js'></script>
+<script src="./assets/js/member.js"></script>
+<script src="./assets/js/cart.js"></script>
+
+    
 </body>
 </html>

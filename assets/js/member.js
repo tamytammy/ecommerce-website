@@ -74,10 +74,12 @@ function loginUI(username){
     loginDisplayName.textContent = username
 }
 function logout(){
-    removeItem(loginUsername)
-    register.style.display = 'block'
-    login.style.display = 'block'
-    logined.style.display = 'none'
-    loginText.textContent =''
-    regText.textContent = ''
+    removeItem('loggedInStatus')
+    alert('已登出')
+    window.location.href = './index.html'
+    // register.style.display = 'block'
+    // login.style.display = 'block'
+    // logined.style.display = 'none'
+    // loginText.textContent =''
+    // regText.textContent = ''
 }

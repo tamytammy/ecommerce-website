@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>會員登入</title>
+    <title>購物車</title>
     <link rel="stylesheet" href="./assets/css/_style.css">
     <link rel="stylesheet" href="./assets/css/member.css">
+    <link rel="stylesheet" href="./assets/css/product.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
     <script src="./assets/js/jQuery-v3-7-1.js"></script>
     
 </head>
@@ -17,9 +19,9 @@
                     <h1><a href="./index.html">Logo</a></h1>
                 </div>
                 <nav class="header__navbar">
-                    <ul class="header__navbar-link">
-                        <li class="nav-hover">最新商品</li>
-                        <li class="nav-hover" data-type="type1">特價專區</li>
+                    <ul class="header__navbar-link category-bar">
+                        <li class="nav-hover filter-btn" data-category="latest">最新商品</li>
+                        <li class="nav-hover filter-btn" data-type="type1" data-category="sale">特價專區</li>
                         <div class="header-box box1" data-type="type1" style="display: none;">
                             <ul>
                                 <li>三件250</li>
@@ -27,14 +29,14 @@
                                 <li>換季折扣系列</li>
                             </ul>
                         </div>
-                        <li class="nav-hover" data-type="type2">限定聯名</li>
+                        <li class="nav-hover filter-btn" data-type="type2" data-category="special">限定聯名</li>
                         <div class="header-box box2" data-type="type2" style="display: none;">
                             <ul>
                                 <li>Hello Kitty</li>
                                 <li>咒術廻戰</li>
                             </ul>
                         </div>
-                        <li class="nav-hover" data-type="type3">全部種類</li>
+                        <li class="nav-hover filter-btn" data-type="type3" data-category="all">全部種類</li>
                         <div class="header-box box3" data-type="type3" style="display: none;">
                             <ul>
                                 <li>上衣</li>
@@ -44,7 +46,7 @@
                                 <li>配件</li>
                             </ul>
                         </div>
-                        <li class="nav-hover">關於我們</li>
+                        <li class="nav-hover" onclick="location.href='./about.html'">關於我們</li>
                     </ul>
                     <script>
                         const navs = document.querySelectorAll('.nav-hover')
@@ -69,16 +71,14 @@
                     </script>
                 </nav>
                 <div class="header__btns">
-                    <button type="button" onclick="location.href='/membership.html'">會員</button>
-                    <button type="button" onclick="location.href='/cart.html'">購物車</button>
+                    <button type="button" onclick="location.href='#'" class="memberlink">會員</button>
+                    <button type="button" onclick="location.href='#'" class="cartlink">購物車<span class="cartNum" style="display: none;"></span></button>
                 </div>
                 
             </header>
         </div>
         <div class="main-container">
-<<<<<<< HEAD
-            <main class="main">
-=======
+
             <main class="main" style="display: none;">
                 <aside class="aside">
                     <ul class="category-bar">
@@ -95,6 +95,7 @@
                     </div>
                 </div>
             </main>
+
             <main class="cart">
             <div class="cart-wrapper">
                 <div class="cart__table" style="display: none;">
@@ -121,7 +122,6 @@
                 </div>
             </div>
             
->>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
                 
             </main>
         </div>
@@ -131,7 +131,8 @@
             </footer>
         </div>
     </div>
-<script src='./assets/js/app.js'></script>
+    <script src="./assets/js/app.js"></script>
     <script src="./assets/js/member.js"></script>
+    <script src="./assets/js/cart.js"></script>
 </body>
 </html>

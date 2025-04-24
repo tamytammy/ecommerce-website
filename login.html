@@ -6,6 +6,8 @@
     <title>會員登入</title>
     <link rel="stylesheet" href="./assets/css/_style.css">
     <link rel="stylesheet" href="./assets/css/member.css">
+    <link rel="stylesheet" href="./assets/css/product.css">
+
     <script src="./assets/js/jQuery-v3-7-1.js"></script>
     
 </head>
@@ -17,9 +19,9 @@
                     <h1><a href="./index.html">Logo</a></h1>
                 </div>
                 <nav class="header__navbar">
-                    <ul class="header__navbar-link">
-                        <li class="nav-hover">最新商品</li>
-                        <li class="nav-hover" data-type="type1">特價專區</li>
+                    <ul class="header__navbar-link category-bar">
+                        <li class="nav-hover filter-btn" data-category="latest">最新商品</li>
+                        <li class="nav-hover filter-btn" data-type="type1" data-category="sale">特價專區</li>
                         <div class="header-box box1" data-type="type1" style="display: none;">
                             <ul>
                                 <li>三件250</li>
@@ -27,14 +29,14 @@
                                 <li>換季折扣系列</li>
                             </ul>
                         </div>
-                        <li class="nav-hover" data-type="type2">限定聯名</li>
+                        <li class="nav-hover filter-btn" data-type="type2" data-category="special">限定聯名</li>
                         <div class="header-box box2" data-type="type2" style="display: none;">
                             <ul>
                                 <li>Hello Kitty</li>
                                 <li>咒術廻戰</li>
                             </ul>
                         </div>
-                        <li class="nav-hover" data-type="type3">全部種類</li>
+                        <li class="nav-hover filter-btn" data-type="type3" data-category="all">全部種類</li>
                         <div class="header-box box3" data-type="type3" style="display: none;">
                             <ul>
                                 <li>上衣</li>
@@ -44,7 +46,7 @@
                                 <li>配件</li>
                             </ul>
                         </div>
-                        <li class="nav-hover">關於我們</li>
+                        <li class="nav-hover" onclick="location.href='./about.html'">關於我們</li>
                     </ul>
                     <script>
                         const navs = document.querySelectorAll('.nav-hover')
@@ -69,20 +71,21 @@
                     </script>
                 </nav>
                 <div class="header__btns">
-<<<<<<< HEAD:membership.html
-                    <button type="button" onclick="location.href='/membership.html'">會員</button>
-                    <button type="button" onclick="location.href='/cart.html'">購物車</button>
-=======
                     <button type="button" onclick="location.href='#'" class="memberlink">會員</button>
                     <button type="button" onclick="location.href='#'" class="cartlink">購物車<span class="cartNum" style="display: none;"></span></button>
->>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版):login.html
                 </div>
                 
             </header>
         </div>
         <div class="main-container">
-            <main class="main">
+            <section class="login-display login">
+                <h1>立即登入</h1>
+            </section>
+            <main class="main login">
                 <div class="login-container">
+                    <div class="login-area">
+                        <h4>會員登入</h4>
+                    </div>
                     <div class="form-group">
                         <form id="loginForm">
                         <span class="loginText"></span>
@@ -107,6 +110,9 @@
                     </div>
                 </div>
                 <div class="reg-container">
+                    <div class="reg-area">
+                        <h4>會員註冊</h4>
+                    </div>
                     <div class="form-group">
                         <form id="registerForm">
                             <span class="registerText"></span>
@@ -148,9 +154,21 @@
                         </form>
                     </div>
                 </div>
-                <div class="logined" style="display: none;">
-                    <h1>歡迎回來! <span class="loginName"></span></h1>
-                    <button onclick="logout()">登出</button>
+            </main>
+            <main class="main" style="display: none;">
+                <aside class="aside">
+                    <ul class="category-bar">
+                        <li data-category="all" class="filter-btn">全部商品</li>
+                        <li data-category="latest" class="filter-btn">最新上市</li>
+                        <li data-category="special" class="filter-btn">限定商品</li>
+                        <li data-category="sale" class="filter-btn">特價專區</li>
+                    </ul>
+                </aside>
+                <div class="aside_right">
+                    <section class="products">
+                    </section>
+                    <div class="pageSelector">
+                    </div>
                 </div>
             </main>
         </div>
@@ -161,11 +179,7 @@
         </div>
     </div>
 <script src='./assets/js/app.js'></script>
-<<<<<<< HEAD:membership.html
-    <script src="./assets/js/member.js"></script>
-=======
 <script src="./assets/js/member.js"></script>
 <script src="./assets/js/cart.js"></script>
->>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版):login.html
 </body>
 </html>

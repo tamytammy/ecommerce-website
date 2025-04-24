@@ -11,8 +11,6 @@ function removeItem(key){
 }
 
 $(document).ready(function(){
-<<<<<<< HEAD
-=======
     
     let allData = [];
     let currentCategory = "all"
@@ -29,18 +27,20 @@ $(document).ready(function(){
         $('.product').hide();
         $('.member').hide();
         $('.check').hide();
+
         pageDivider(filtered) // 篩選後重新分頁與渲染
     })
 
     
     //商品API
->>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     $.ajax({
         url: './assets/data/products.json',
         dataType: 'json',
         type: 'GET',
-        success:function(itemData){
-            pageDivider(itemData)
+        success:function(data){
+            allData = data
+            pageDivider(allData)
+            productDetail(allData)
         },
         erroo:function(itemData){
             alert('Get JSON檔案失敗!')
@@ -52,12 +52,13 @@ $(document).ready(function(){
         itemData.forEach(item=>{
                 let name = item.name
                 let price = item.price
-                let img = item.img
+                let id = item.id
+                let img = item.image
                 if(!img){
                     img = './assets/img/notfount.png'
                 }
                 let html = ''
-                html = "<div class='product-box'><div class='product-box__img'><img src='"+ img +"' alt=''></div><div class='product-box__text'><p class='product-box__text-name'>"+ name +"</p><div class='product-box__text-detail'><span class='price'>$"+ price +"</span></div></div></div>"
+                html = "<div class='product-box'><div class='product-box__img' style='overflow:hidden;text-align:center;'><a href='./product.html?id="+ id +"'><img src='"+ img +"' style='width:auto;height:100%;cursor:pointer'></a></div><div class='product-box__text'><p class='product-box__text-name'>"+ name +"</p><div class='product-box__text-detail'><span class='price'>$"+ price +"</span></div></div><div class='addCart-btn' data-id='"+ id +"'><span>+</span></div></div>"
                 $('.products').append(html);
             })
     }
@@ -98,8 +99,6 @@ $(document).ready(function(){
         
 
     }
-<<<<<<< HEAD
-=======
 
     //商品頁面
     function productDetail(){
@@ -145,7 +144,5 @@ $(document).ready(function(){
     }
 
 
-
->>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     
 })
