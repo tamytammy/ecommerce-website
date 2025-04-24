@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce-Website</title>
+    <link rel="stylesheet" href="./assets/css/_style.css">
+    <!-- 引用需要css -->
+    <script src="./assets/js/jQuery-v3-7-1.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="header-container">
+            <header class="header">
+                <div class="header__logo">
+                    <h1><a href="./index.html">Logo</a></h1>
+                </div>
+                <nav class="header__navbar">
+                    <ul class="header__navbar-link category-bar">
+                        <li class="nav-hover filter-btn" data-category="latest">最新商品</li>
+                        <li class="nav-hover filter-btn" data-type="type1" data-category="sale">特價專區</li>
+                        <div class="header-box box1" data-type="type1" style="display: none;">
+                            <ul>
+                                <li>三件250</li>
+                                <li>任選兩樣77折</li>
+                                <li>換季折扣系列</li>
+                            </ul>
+                        </div>
+                        <li class="nav-hover filter-btn" data-type="type2" data-category="special">限定聯名</li>
+                        <div class="header-box box2" data-type="type2" style="display: none;">
+                            <ul>
+                                <li>Hello Kitty</li>
+                                <li>咒術廻戰</li>
+                            </ul>
+                        </div>
+                        <li class="nav-hover filter-btn" data-type="type3" data-category="all">全部種類</li>
+                        <div class="header-box box3" data-type="type3" style="display: none;">
+                            <ul>
+                                <li>上衣</li>
+                                <li>內搭</li>
+                                <li>褲裝</li>
+                                <li>裙裝</li>
+                                <li>配件</li>
+                            </ul>
+                        </div>
+                        <li class="nav-hover">關於我們</li>
+                    </ul>
+                    <script>
+                        const navs = document.querySelectorAll('.nav-hover')
+                        const boxes = document.querySelectorAll('.header-box')
+
+                        navs.forEach(nav=>{
+                            nav.addEventListener('mouseenter',()=>{
+                                var type = nav.getAttribute('data-type')
+                                boxes.forEach(box=>{
+                                    if(box.getAttribute('data-type') === type){
+                                        box.style.display="block"
+                                    }else{
+                                        box.style.display="none"
+                                    }
+                                    box.addEventListener('mouseleave',()=>{
+                                        box.style.display="none"
+                                    })
+                                })
+                            })
+
+                        })
+                    </script>
+                </nav>
+                <div class="header__btns">
+                    <button type="button" onclick="location.href='#'" class="memberlink">會員</button>
+                    <button type="button" onclick="location.href='#'" class="cartlink">購物車<span class="cartNum" style="display: none;"></span></button>
+                </div>
+                
+            </header>
+        </div>
+        <div class="main-container">
+            <main class="main" style="display: none;">
+                <aside class="aside">
+                    <ul class="category-bar">
+                        <li data-category="all" class="filter-btn">全部商品</li>
+                        <li data-category="latest" class="filter-btn">最新上市</li>
+                        <li data-category="special" class="filter-btn">限定商品</li>
+                        <li data-category="sale" class="filter-btn">特價專區</li>
+                    </ul>
+                </aside>
+                <div class="aside_right">
+                    <section class="products">
+                    </section>
+                    <div class="pageSelector">
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="footer-container">
+            <footer class="footer">
+                <h4>THIS IS FOOTER</h4>
+            </footer>
+        </div>
+    </div>
+
+<!-- 引用需要js -->
+<script src='./assets/js/app.js'></script>
+<script src="./assets/js/member.js"></script>
+<script src="./assets/js/cart.js"></script>
+</body>
+</html>

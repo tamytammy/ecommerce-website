@@ -1,0 +1,65 @@
+.check{
+    width: 100%;
+    min-height: 700px;
+    border: 1px solid black;
+}
+.check-container{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+
+    .check-progress{
+        display: flex;
+        gap: 5px;
+        div{
+            height: 5px;
+            width: 150px;
+            background-color: #ccc;
+            position: relative;
+            color: #ccc;
+            &:nth-child(1):before{
+                content: 'Step1';
+                position: absolute;
+                top: -20px;
+                left: 0;
+                font-size: 12px;
+            }
+            &:nth-child(2):before{
+                content: 'Step2';
+                position: absolute;
+                top: -20px;
+                left: 0;
+                font-size: 12px;
+            }
+            &:nth-child(3):before{
+                content: 'Step3';
+                position: absolute;
+                top: -20px;
+                left: 0;
+                font-size: 12px;
+            }
+        }
+        .active{
+            background-color: #303030;
+            color: #303030;
+        }
+    }
+    .check__title{
+        form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        label{
+            display: flex;;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+    }
+    
+}

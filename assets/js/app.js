@@ -11,6 +11,30 @@ function removeItem(key){
 }
 
 $(document).ready(function(){
+<<<<<<< HEAD
+=======
+    
+    let allData = [];
+    let currentCategory = "all"
+    //分類按鈕
+    $('.category-bar').on('click', '.filter-btn', function(){
+        currentCategory = $(this).data('category')
+
+        const filtered = (currentCategory === 'all')
+            ? allData
+            : allData.filter(item => item.category === currentCategory)
+        $('.main').show();
+        $('.login').hide();
+        $('.cart').hide();
+        $('.product').hide();
+        $('.member').hide();
+        $('.check').hide();
+        pageDivider(filtered) // 篩選後重新分頁與渲染
+    })
+
+    
+    //商品API
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     $.ajax({
         url: './assets/data/products.json',
         dataType: 'json',
@@ -74,5 +98,54 @@ $(document).ready(function(){
         
 
     }
+<<<<<<< HEAD
+=======
+
+    //商品頁面
+    function productDetail(){
+        const urlId = new URLSearchParams(window.location.search).get('id')
+        const product = allData.find(item => item.id == urlId)
+
+        $('.product-img').attr('src', product.image)
+        $('.product-name').text(product.name)
+        $('.product-info').text(product.description)
+        $('.product-price').text(product.price)
+        $('.product-id').attr('data-id', product.id)
+
+    }
+    //登入前後連結判斷
+    $(document).on('click','.memberlink',function(e){
+        e.preventDefault();
+        const isLogin = getItem('loggedInStatus');
+        if(isLogin){
+            location.href = './member.html'
+            
+        }else{
+            location.href = './login.html';
+        }
+    })
+    $(document).on('click','.cartlink',function(e){
+        e.preventDefault();
+        const isLogin = getItem('loggedInStatus');
+        if(isLogin){
+            location.href = './cart.html'
+            
+        }else{
+            alert('請先登入!')
+            location.href = './login.html';
+        }
+    })
+    function updateUser(updatedUser) {
+        let users = getItem('users') || []
+        const index = users.findIndex(u => u.username === updatedUser.username)
+        if (index !== -1) {
+            users[index] = updatedUser
+            setItem('users', users)
+        }
+    }
+
+
+
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     
 })

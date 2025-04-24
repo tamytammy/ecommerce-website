@@ -76,7 +76,11 @@
     "name": "夏季透氣短袖襯衫",
     "category": "衣著",
     "price": 620,
+<<<<<<< HEAD
     "image": "assets/images/summer_shirt.jpg",
+=======
+    "image": "./assets/img/10.jpeg",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "輕薄布料製成的短袖襯衫，讓你在炎熱天氣也能清爽自在。"
   },
   {
@@ -124,7 +128,11 @@
     "name": "親膚長袖高領毛衣",
     "category": "衣著",
     "price": 850,
+<<<<<<< HEAD
     "image": "assets/images/turtleneck.jpg",
+=======
+    "image": "./assets/img/16.jpeg",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "保暖高領設計，適合秋冬季節的溫暖選擇。"
   },
   {
@@ -132,7 +140,11 @@
     "name": "寬鬆休閒帽T",
     "category": "衣著",
     "price": 690,
+<<<<<<< HEAD
     "image": "assets/images/loose_hoodie.jpg",
+=======
+    "image": "./assets/img/17.jpeg",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "街頭風格寬鬆帽T，隨興穿搭也能有型。"
   },
   {
@@ -148,7 +160,11 @@
     "name": "條紋V領針織衫",
     "category": "衣著",
     "price": 720,
+<<<<<<< HEAD
     "image": "assets/images/striped_knit.jpg",
+=======
+    "image": "./assets/img/19.jpeg",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "條紋V領設計，輕盈又舒適，適合四季穿搭。"
   },
   {
@@ -172,7 +188,11 @@
     "name": "文藝風圓裙",
     "category": "衣著",
     "price": 810,
+<<<<<<< HEAD
     "image": "assets/images/art_skirt.jpg",
+=======
+    "image": "./assets/img/22.jpeg",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "自然飄逸的圓裙設計，走動間帶出詩意律動感。"
   },
   {
@@ -188,7 +208,11 @@
     "name": "氣質雪紡襯衫",
     "category": "衣著",
     "price": 790,
+<<<<<<< HEAD
     "image": "assets/images/chiffon_shirt.jpg",
+=======
+    "image": "./assets/img/24.png",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "輕柔雪紡布料，帶有微微透膚感，氣質滿分。"
   },
   {
@@ -196,7 +220,11 @@
     "name": "簡約風棉麻上衣",
     "category": "衣著",
     "price": 670,
+<<<<<<< HEAD
     "image": "assets/images/cotton_linen_top.jpg",
+=======
+    "image": "./assets/img/25.png",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "自然棉麻材質，簡單耐看又透氣。"
   },
   {
@@ -204,7 +232,11 @@
     "name": "素色高腰短褲",
     "category": "衣著",
     "price": 490,
+<<<<<<< HEAD
     "image": "assets/images/highwaist_shorts.jpg",
+=======
+    "image": "./assets/img/27.jpg",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "高腰設計修飾比例，夏季必備的百搭單品。"
   },
   {
@@ -212,7 +244,11 @@
     "name": "潮流印花T恤",
     "category": "衣著",
     "price": 620,
+<<<<<<< HEAD
     "image": "assets/images/graphic_tshirt.jpg",
+=======
+    "image": "./assets/img/27.jpg",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "印花設計潮流感十足，讓你走在時尚前端。"
   },
   {
@@ -220,7 +256,11 @@
     "name": "針織開襟外套",
     "category": "衣著",
     "price": 980,
+<<<<<<< HEAD
     "image": "assets/images/knit_cardigan.jpg",
+=======
+    "image": "./assets/img/28.jpg",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "針織材質舒適保暖，適合室內外皆穿著。"
   },
   {
@@ -228,7 +268,11 @@
     "name": "歐系設計寬版襯衫",
     "category": "衣著",
     "price": 1100,
+<<<<<<< HEAD
     "image": "assets/images/european_shirt.jpg",
+=======
+    "image": "./assets/img/29.jpg",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "歐風設計的寬版剪裁，穿出不同凡響的氣場。"
   },
   {
@@ -236,7 +280,11 @@
     "name": "多功能健身運動服",
     "category": "衣著",
     "price": 1350,
+<<<<<<< HEAD
     "image": "assets/images/sport_outfit.jpg",
+=======
+    "image": "./assets/img/30.jpg",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "透氣吸汗材質，運動時保持乾爽。"
   },
   {
@@ -244,7 +292,11 @@
     "name": "休閒棉質吊帶褲",
     "category": "衣著",
     "price": 880,
+<<<<<<< HEAD
     "image": "assets/images/overall.jpg",
+=======
+    "image": "./assets/img/29.jpg",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "可愛休閒風格吊帶褲，輕鬆打造童趣造型。"
   },
   {
@@ -252,7 +304,11 @@
     "name": "素面短版運動背心",
     "category": "衣著",
     "price": 399,
+<<<<<<< HEAD
     "image": "assets/images/sport_bra.jpg",
+=======
+    "image": "./assets/img/32.jpg",
+>>>>>>> 2815d93 (feat: 新增結帳頁面 fix: 修正商品頁面des, 購物車icon數量更新 style: 結帳頁面樣式與排版)
     "description": "簡約設計短版背心，適合瑜伽、健身等運動穿著。"
   }
 

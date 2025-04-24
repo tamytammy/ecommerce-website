@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce-Website</title>
+    <link rel="stylesheet" href="./assets/css/_style.css">
+    <link rel="stylesheet" href="./assets/css/product.css">
+    <link rel="stylesheet" href="./assets/css/check.css">
+    <script src="./assets/js/jQuery-v3-7-1.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="header-container">
+            <header class="header">
+                <div class="header__logo">
+                    <h1><a href="./index.html">Logo</a></h1>
+                </div>
+                <nav class="header__navbar">
+                    <ul class="header__navbar-link category-bar">
+                        <li class="nav-hover filter-btn" data-category="latest">最新商品</li>
+                        <li class="nav-hover filter-btn" data-type="type1" data-category="sale">特價專區</li>
+                        <div class="header-box box1" data-type="type1" style="display: none;">
+                            <ul>
+                                <li>三件250</li>
+                                <li>任選兩樣77折</li>
+                                <li>換季折扣系列</li>
+                            </ul>
+                        </div>
+                        <li class="nav-hover filter-btn" data-type="type2" data-category="special">限定聯名</li>
+                        <div class="header-box box2" data-type="type2" style="display: none;">
+                            <ul>
+                                <li>Hello Kitty</li>
+                                <li>咒術廻戰</li>
+                            </ul>
+                        </div>
+                        <li class="nav-hover filter-btn" data-type="type3" data-category="all">全部種類</li>
+                        <div class="header-box box3" data-type="type3" style="display: none;">
+                            <ul>
+                                <li>上衣</li>
+                                <li>內搭</li>
+                                <li>褲裝</li>
+                                <li>裙裝</li>
+                                <li>配件</li>
+                            </ul>
+                        </div>
+                        <li class="nav-hover" onclick="location.href='./about.html'">關於我們</li>
+                    </ul>
+                    <script>
+                        const navs = document.querySelectorAll('.nav-hover')
+                        const boxes = document.querySelectorAll('.header-box')
+
+                        navs.forEach(nav=>{
+                            nav.addEventListener('mouseenter',()=>{
+                                var type = nav.getAttribute('data-type')
+                                boxes.forEach(box=>{
+                                    if(box.getAttribute('data-type') === type){
+                                        box.style.display="block"
+                                    }else{
+                                        box.style.display="none"
+                                    }
+                                    box.addEventListener('mouseleave',()=>{
+                                        box.style.display="none"
+                                    })
+                                })
+                            })
+
+                        })
+                    </script>
+                </nav>
+                <div class="header__btns">
+                    <button type="button" onclick="location.href='#'" class="memberlink">會員</button>
+                    <button type="button" onclick="location.href='#'" class="cartlink">購物車<span class="cartNum" style="display: none;"></span></button>
+                </div>
+                
+            </header>
+        </div>
+        <div class="main-container">
+            <main class="main" style="display: none;">
+                <aside class="aside">
+                    <ul class="category-bar">
+                        <li data-category="all" class="filter-btn">全部商品</li>
+                        <li data-category="latest" class="filter-btn">最新上市</li>
+                        <li data-category="special" class="filter-btn">限定商品</li>
+                        <li data-category="sale" class="filter-btn">特價專區</li>
+                    </ul>
+                </aside>
+                <div class="aside_right">
+                    <section class="products">
+                    </section>
+                    <div class="pageSelector">
+                    </div>
+                </div>
+            </main>
+            <main class="check">
+                <div class="check-container">
+                    <div class="check-progress">
+                        <div class="active"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="check__title" data-step="1">
+                        <h1>個人資料</h1>
+                        <form data-step="1">
+                            <label for="name">姓名<input type="text" id="name"></label>
+                            
+                            <label for="phone">電話<input type="text" id="phone"></label>
+                            
+                            <label for="mail">電子郵件<input type="email" id="mail"></label>
+                            
+                            <label for="address">地址<input type="text" id="address"></label>
+                            
+                            <button type="button" >下一步:付款資訊</button>   
+                        </form>
+                    </div>
+                    <div class="check__title" data-step="2" style="display: none;">
+                        <h1>付款資訊</h1>
+                        <form data-step="2">
+                            <label for="name">付款方式
+                                <select name="payment" id="payment">
+                                    <option value="信用卡">信用卡</option>
+                                    <option value="貨到付款">貨到付款</option>
+                                </select>
+                            </label>
+
+                            <div class="credit-container">
+                                    <div class="credit-1">
+                                <label for="creditCard">信用卡號碼<input type="text" id="creditCard" pattern="/d" minlength="4"><input type="text" id="creditCard" pattern="/d" minlength="4"><input type="text" id="creditCard" pattern="/d" minlength="4"><input type="text" id="creditCard" pattern="/d" minlength="4"></label>
+                            </div>
+                            
+                            <div class="credit-2">
+                                <label for="expireDate">有效期限<input type="text"></label>
+                                <label for="securityCode">安全碼<input type="text"></label>
+                            </div>
+                            </div>
+                            
+                            <label for="name">姓名<input type="text" id="name"></label>
+                            
+                            <label for="address">地址<input type="text" id="address"></label>
+                            
+                            <button type="button">下一步:訂單確認</button>   
+                        </form>
+                    </div>
+                    <div class="check__title" data-step="3" style="display: none;">
+                        <h1>訂單確認</h1>
+                        <form data-step="3">
+                            <div class="order-content">
+                                <p>購物車資訊</p>
+                            </div>
+                            <div class="personal-content">
+                                <p>個人資訊</p>
+                            </div>
+                            <div class="order-ps">
+                                <h4>訂單備註</h4>
+                                <textarea name="ps" id="ps"></textarea>
+                            </div>
+                            
+                            <button type="button" onclick="check()">送出訂單</button>   
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="footer-container">
+            <footer class="footer">
+                <h4>THIS IS FOOTER</h4>
+            </footer>
+        </div>
+    </div>
+<script src='./assets/js/app.js'></script>
+<script src="./assets/js/member.js"></script>
+<script src="./assets/js/cart.js"></script>
+
+    
+</body>
+</html>
