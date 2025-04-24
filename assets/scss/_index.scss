@@ -1,8 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
+
+
 body{
     background-color: blanchedalmond;
     position: relative;
@@ -166,11 +164,13 @@ body{
     }
 }
 .footer-container{
+    width: 100%;
     .footer{
         min-height: 150px;
-        display: flex;
+        background-color: #fff;
+        display: flex ;
         justify-content: center;
         align-items: center;
-        background-color: #fff;
     }
 }
+

@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>結帳</title>
-    <link rel="stylesheet" href="./assets/css/_style.css">
-    <link rel="stylesheet" href="./assets/css/product.css">
-    <link rel="stylesheet" href="./assets/css/check.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
     <script src="./assets/js/jQuery-v3-7-1.js"></script>
 </head>
 <body>
@@ -120,8 +118,10 @@
                         <form data-step="2">
                             <label for="name">付款方式
                                 <select name="payment" id="payment">
-                                    <option value="信用卡">信用卡</option>
                                     <option value="貨到付款">貨到付款</option>
+                                    <option value="信用卡">信用卡</option>
+                                    <option value="行動支付">LINE PAY</option>
+                                    <option value="ATM虛擬帳號繳款">ATM虛擬帳號繳款</option>
                                 </select>
                             </label>
 
@@ -157,7 +157,58 @@
                                 <textarea name="ps" id="ps"></textarea>
                             </div>
                             <button type="button" class="prevBtn" data-step="3">回上一步</button>
-                            <button type="button" onclick="check()">送出訂單</button>   
+                            <button type="button" onclick="check()" id="fakeLinePay">模擬Line Pay</button>   
+<!-- 模擬line pay API付款 -->
+<script>
+  document.getElementById("fakeLinePay").addEventListener("click", () => {
+    fetch("https://run.mocky.io/v3/e0fe3c05-5289-479a-80f8-745d7a4f69bf", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        amount: 100,
+        currency: "TWD",
+        orderId: "TEST_ORDER_001",
+        packages: [
+          {
+            id: "1",
+            amount: 100,
+            products: [
+              {
+                id: "PEN-B-001",
+                name: "Pen Brown",
+                quantity: 2,
+                price: 50
+              }
+            ]
+          }
+        ],
+        redirectUrls: {
+          confirmUrl: "https://your-site.com/confirm",
+          cancelUrl: "https://your-site.com/cancel"
+        }
+      })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.returnCode === "0000") {
+          // 成功，導向付款頁面
+          window.location.href = 'login.html';
+        } else {
+          alert("模擬失敗：" + data.returnMessage);
+        }
+      })
+      .catch(err => {
+        console.error("錯誤", err);
+        alert("模擬 API 呼叫失敗！");
+      });
+  });
+</script>
+                        
+                        
+                        
+                        
                         </form>
                     </div>
                     </div>

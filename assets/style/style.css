@@ -1,0 +1,541 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blanchedalmond;
+  position: relative;
+}
+
+.header-container {
+  width: 100%;
+}
+.header-container .header {
+  width: auto;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.header-container .header__logo h1 {
+  cursor: pointer;
+}
+.header-container .header__navbar {
+  position: relative;
+}
+.header-container .header__navbar-link {
+  display: flex;
+  justify-content: space-evenly;
+}
+.header-container .header__navbar-link li {
+  list-style: none;
+  padding: 3px 4px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.header-container .header__navbar-link .header-box {
+  background-color: antiquewhite;
+  position: absolute;
+  top: 40px;
+  width: 80px;
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.25);
+}
+.header-container .header__navbar-link .box1 {
+  left: 80px;
+}
+.header-container .header__navbar-link .box2 {
+  left: 160px;
+}
+.header-container .header__navbar-link .box3 {
+  left: 240px;
+}
+.header-container .header__btns button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: cadetblue;
+  cursor: pointer;
+  position: relative;
+}
+.header-container .header__btns button span {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  background-color: #fff;
+  border-radius: 100px;
+}
+
+.main-container .main {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-evenly;
+  min-height: auto;
+  width: 100%;
+  gap: 50px;
+}
+.main-container .main .aside {
+  min-width: 230px;
+  height: 500px;
+  position: sticky;
+  top: 0;
+  background-color: aquamarine;
+}
+.main-container .main .aside ul {
+  width: 100%;
+}
+.main-container .main .aside ul li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.main-container .main .aside_right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.main-container .main .aside_right .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+.main-container .main .aside_right .products .product-box {
+  height: 300px;
+  border: 1px solid black;
+  position: relative;
+}
+.main-container .main .aside_right .products .product-box__img {
+  width: 100%;
+  height: 200px;
+  border: 1px solid red;
+}
+.main-container .main .aside_right .products .product-box__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container .main .aside_right .products .product-box .addCart-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: orange;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  display: none;
+}
+.main-container .main .aside_right .products .product-box:hover .addCart-btn {
+  display: flex;
+}
+.main-container .main .aside_right .pageSelector {
+  text-align: center;
+}
+.main-container .main .aside_right .pageSelector button {
+  outline: none;
+  background-color: transparent;
+  border: 1px solid seagreen;
+  cursor: pointer;
+}
+.main-container .main .aside_right .pageSelector button span {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: cadetblue;
+  color: #fff;
+  border-radius: 100%;
+}
+
+.footer-container {
+  width: 100%;
+}
+.footer-container .footer {
+  min-height: 150px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-container .login-display {
+  border-bottom: 2px solid #ccc;
+}
+.main-container .login {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main-container .login .login-container {
+  width: 330px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main-container .login .login-container .form-group {
+  padding: 10px 0;
+}
+.main-container .login .login-container .form-group span {
+  color: red;
+  font-size: 12px;
+}
+.main-container .login .login-container .form-group .formBox label {
+  display: inline-block;
+  padding: 5px 0;
+}
+.main-container .login .login-container .form-group .formBox:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main-container .login .login-container .form-group button {
+  outline: none;
+  border: 1px solid #000;
+  background-color: transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.main-container .login .reg-container {
+  width: 330px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main-container .login .reg-container .form-group {
+  padding: 10px 0;
+}
+.main-container .login .reg-container .form-group label {
+  display: inline-block;
+  padding: 5px 0;
+}
+.main-container .login .reg-container .form-group span {
+  color: red;
+  font-size: 12px;
+}
+.main-container .login .reg-container .form-group button {
+  display: inline-block;
+  outline: none;
+  border: 1px solid black;
+  padding: 5px 30px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.main-container .member {
+  background-color: #fff;
+  width: 60%;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  margin: 50px 0;
+}
+
+.product .product__container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.product .product__container-top {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product .product__container-top .top__img {
+  width: 40%;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product .product__container-top .top__img img {
+  width: 100%;
+}
+.product .product__container-top .top__text {
+  min-width: 300px;
+  width: 60%;
+  padding: 50px 100px;
+}
+.product .product__container-top .top__text h3 {
+  padding: 20px 0;
+}
+.product .product__container-top .top__text-info {
+  margin: 50px 0 100px;
+  min-height: 150px;
+}
+.product .product__container-top .top__text-info span {
+  color: #fff;
+  background-color: red;
+  padding: 5px 10px;
+}
+.product .product__container-top .top__text button {
+  width: 100%;
+  border: 1px solid #303030;
+  padding: 10px;
+  transition: all 0.1s ease-out;
+  background-color: transparent;
+  cursor: pointer;
+}
+.product .product__container-top .top__text button:hover {
+  background-color: #fff;
+}
+.product .product__container-bottom {
+  width: 60%;
+  margin: 0 auto;
+}
+.product .product__container-bottom .bottom-tab ul {
+  display: flex;
+}
+.product .product__container-bottom .bottom-tab ul li {
+  list-style: none;
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid #303030;
+  cursor: pointer;
+}
+.product .product__container-bottom .bottom-tab ul .active {
+  background-color: #303030;
+  color: #ddd;
+}
+.product .product__container-bottom .bottom-content {
+  min-height: 430px;
+  display: flex;
+  position: relative;
+}
+.product .product__container-bottom .bottom-content .contents {
+  background-color: rgb(210, 177, 210);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border: 1px solid #fff;
+  width: 100%;
+}
+.product .product__container-bottom .bottom-content .on {
+  z-index: 1;
+}
+
+main.cart {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+main.cart .cart-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 10px 50px 60px;
+  border-radius: 15px;
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.25);
+}
+main.cart .cart-wrapper .cart__table {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+main.cart .cart-wrapper .cart__table-name {
+  width: 50%;
+  text-align: center;
+}
+main.cart .cart-wrapper .cart__container {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+main.cart .cart-wrapper .cart__container-name {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main.cart .cart-wrapper .cart__container-name .cart-img {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+}
+main.cart .cart-wrapper .cart__container-name .cart-img img {
+  width: auto;
+  height: 100%;
+}
+main.cart .cart-wrapper .cart__container-quantity {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+}
+main.cart .cart-wrapper .cart__container-quantity input::-webkit-outer-spin-button,
+main.cart .cart-wrapper .cart__container-quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  background-color: #000;
+}
+main.cart .cart-wrapper .cart__container-quantity input {
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  text-align: center;
+}
+main.cart .cart-wrapper .cart__container-quantity button {
+  border: 1px solid #ccc;
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+main.cart .cart-wrapper .cart__container-quantity button:hover {
+  background-color: #ccc;
+}
+main.cart .cart-wrapper .cart__container-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+main.cart .cart-wrapper .cart__container-price button {
+  border: 1px solid #ccc;
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+main.cart .cart-wrapper .cart__container-price button:hover {
+  background-color: red;
+  color: #fff;
+}
+main.cart .cart-wrapper .cart__none {
+  text-align: center;
+}
+main.cart .cart-wrapper .cart__none h4 {
+  color: #303030;
+  padding: 10px 30px;
+}
+main.cart .cart-wrapper .cart__none button {
+  border: 1px solid #ccc;
+  background: none;
+  padding: 5px 10px;
+  color: #303030;
+  cursor: pointer;
+}
+main.cart .cart-total-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px 0;
+  text-align: right;
+}
+main.cart .cart-total-wrapper .totalPrice {
+  color: red;
+}
+main.cart .cart-total-wrapper .cart-next-step button {
+  cursor: pointer;
+  background-color: rgb(255, 170, 11);
+  border: none;
+  padding: 5px 40px;
+  border-radius: 4px;
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-out;
+}
+main.cart .cart-total-wrapper .cart-next-step button:hover {
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.35);
+}
+main.cart .cart-total-wrapper .cart-next-step button:active {
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.35);
+}
+
+.check {
+  width: 100%;
+  min-height: 700px;
+}
+
+.check-container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  overflow-x: hidden;
+}
+.check-container .check-progress {
+  display: flex;
+  gap: 5px;
+}
+.check-container .check-progress div {
+  height: 5px;
+  width: 150px;
+  background-color: #ccc;
+  position: relative;
+  color: #ccc;
+}
+.check-container .check-progress div:nth-child(1):before {
+  content: "Step1";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 12px;
+}
+.check-container .check-progress div:nth-child(2):before {
+  content: "Step2";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 12px;
+}
+.check-container .check-progress div:nth-child(3):before {
+  content: "Step3";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 12px;
+}
+.check-container .check-progress .active {
+  background-color: #303030;
+  color: #303030;
+}
+.check-container .checkStep-container {
+  display: flex;
+  width: 100%;
+  gap: 100px;
+  padding: 30px 50px 0;
+  transition: all 0.3s ease-out;
+}
+.check-container .checkStep-container .check__title {
+  min-width: 100%;
+}
+.check-container .checkStep-container .check__title form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.check-container .checkStep-container .check__title form label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}/*# sourceMappingURL=style.css.map */
