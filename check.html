@@ -96,11 +96,12 @@
             <main class="check">
                 <div class="check-container"> 
                 <div class="check-progress">
-                        <div class="active"></div>
-                        <div></div>
-                        <div></div>
+                        <div class="progressBar active" data-step="1"></div>
+                        <div class="progressBar " data-step="2"></div>
+                        <div class="progressBar " data-step="3"></div>
                     </div>
-                    <div class="check__title" data-step="1">
+                    <div class="checkStep-container">
+                        <div class="check__title" data-step="1">
                         <h1>個人資料</h1>
                         <form data-step="1">
                             <label for="name">姓名<input type="text" id="name"></label>
@@ -111,10 +112,10 @@
                             
                             <label for="address">地址<input type="text" id="address"></label>
                             
-                            <button type="button" >下一步:付款資訊</button>   
+                            <button type="button" class="nextBtn" data-step="1">下一步:付款資訊</button>   
                         </form>
                     </div>
-                    <div class="check__title" data-step="2" style="display: none;">
+                    <div class="check__title" data-step="2">
                         <h1>付款資訊</h1>
                         <form data-step="2">
                             <label for="name">付款方式
@@ -138,11 +139,11 @@
                             <label for="name">姓名<input type="text" id="name"></label>
                             
                             <label for="address">地址<input type="text" id="address"></label>
-                            
-                            <button type="button">下一步:訂單確認</button>   
+                            <button type="button" class="prevBtn" data-step="2">回上一步</button>
+                            <button type="button" class="nextBtn" data-step="2">下一步:訂單確認</button>   
                         </form>
                     </div>
-                    <div class="check__title" data-step="3" style="display: none;">
+                    <div class="check__title" data-step="3">
                         <h1>訂單確認</h1>
                         <form data-step="3">
                             <div class="order-content">
@@ -155,9 +156,10 @@
                                 <h4>訂單備註</h4>
                                 <textarea name="ps" id="ps"></textarea>
                             </div>
-                            
+                            <button type="button" class="prevBtn" data-step="3">回上一步</button>
                             <button type="button" onclick="check()">送出訂單</button>   
                         </form>
+                    </div>
                     </div>
                 </div>
             </main>
@@ -171,7 +173,7 @@
 <script src='./assets/js/app.js'></script>
 <script src="./assets/js/member.js"></script>
 <script src="./assets/js/cart.js"></script>
-
+<script src="./assets/js/checkout.js"></script>
     
 </body>
 </html>

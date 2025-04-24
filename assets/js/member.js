@@ -34,7 +34,7 @@ regForm.addEventListener('submit',(e)=>{
         cart:[],
         orders:[]
     }
-    console.log(newUsers)
+    
     users.push(newUsers)
     setItem('users',users)
     regForm.reset();

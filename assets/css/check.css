@@ -1,7 +1,6 @@
 .check {
   width: 100%;
   min-height: 700px;
-  border: 1px solid black;
 }
 
 .check-container {
@@ -13,6 +12,7 @@
   justify-content: center;
   align-items: center;
   padding: 30px 0;
+  overflow-x: hidden;
 }
 .check-container .check-progress {
   display: flex;
@@ -50,12 +50,22 @@
   background-color: #303030;
   color: #303030;
 }
-.check-container .check__title form {
+.check-container .checkStep-container {
+  display: flex;
+  width: 100%;
+  gap: 100px;
+  padding: 30px 50px 0;
+  transition: all 0.3s ease-out;
+}
+.check-container .checkStep-container .check__title {
+  min-width: 100%;
+}
+.check-container .checkStep-container .check__title form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.check-container .check__title form label {
+.check-container .checkStep-container .check__title form label {
   display: flex;
   align-items: center;
   gap: 10px;
