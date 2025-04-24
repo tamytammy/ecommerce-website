@@ -1,0 +1,87 @@
+.product .product__container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.product .product__container-top {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product .product__container-top .top__img {
+  width: 40%;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product .product__container-top .top__img img {
+  width: 100%;
+}
+.product .product__container-top .top__text {
+  min-width: 300px;
+  width: 60%;
+  padding: 50px 100px;
+}
+.product .product__container-top .top__text h3 {
+  padding: 20px 0;
+}
+.product .product__container-top .top__text-info {
+  margin: 50px 0 100px;
+  min-height: 150px;
+}
+.product .product__container-top .top__text-info span {
+  color: #fff;
+  background-color: red;
+  padding: 5px 10px;
+}
+.product .product__container-top .top__text button {
+  width: 100%;
+  border: 1px solid #303030;
+  padding: 10px;
+  transition: all 0.1s ease-out;
+  background-color: transparent;
+  cursor: pointer;
+}
+.product .product__container-top .top__text button:hover {
+  background-color: #fff;
+}
+.product .product__container-bottom {
+  width: 60%;
+  margin: 0 auto;
+}
+.product .product__container-bottom .bottom-tab ul {
+  display: flex;
+}
+.product .product__container-bottom .bottom-tab ul li {
+  list-style: none;
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid #303030;
+  cursor: pointer;
+}
+.product .product__container-bottom .bottom-tab ul .active {
+  background-color: #303030;
+  color: #ddd;
+}
+.product .product__container-bottom .bottom-content {
+  min-height: 430px;
+  display: flex;
+  position: relative;
+}
+.product .product__container-bottom .bottom-content .contents {
+  background-color: rgb(210, 177, 210);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border: 1px solid #fff;
+  width: 100%;
+}
+.product .product__container-bottom .bottom-content .on {
+  z-index: 1;
+}
+
+/*# sourceMappingURL=product.css.map */

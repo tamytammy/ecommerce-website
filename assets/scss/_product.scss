@@ -1,0 +1,97 @@
+.product{
+    .product__container{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        &-top{
+            display: flex;
+            width: 60%;
+            margin: 0 auto;
+            justify-content: center;
+            flex-wrap: wrap;
+            .top__img{
+                width: 40%;
+                min-width: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width:100%;
+                }
+            }
+            .top__text{
+                min-width: 300px;
+                width: 60%;
+                padding: 50px 100px;
+                h3{
+
+                    padding: 20px 0;
+                }
+                &-info{
+
+                    margin: 50px 0 100px;
+                    min-height: 150px;
+                    span{
+                        color: #fff;
+                        background-color: red;
+                        padding: 5px 10px ;
+                    }
+                }
+                &-amount{
+                    
+                }
+                button{
+                    width: 100%;
+                    border: 1px solid #303030;
+                    padding: 10px;
+                    transition: all .1s ease-out;
+                    background-color: transparent;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+        &-bottom{
+            width: 60%;
+            margin: 0 auto;
+            .bottom-tab{
+                ul{
+                    display: flex;
+                    li{
+                        list-style: none;
+                        padding: 5px 10px ;
+                        background-color: #fff;
+                        border: 1px solid #303030;
+                        cursor: pointer;
+                        
+                    
+                    }
+                    .active{
+                        background-color: #303030;
+                        color: #ddd;
+                        }
+                }
+                
+            }
+            .bottom-content{
+                min-height: 430px;
+                display: flex;
+                position: relative;
+                .contents{
+                    background-color: rgb(210, 177, 210);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    border: 1px solid #fff;
+                    width: 100%;
+                }
+                .on{
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
