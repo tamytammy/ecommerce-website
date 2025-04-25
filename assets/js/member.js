@@ -37,8 +37,8 @@ regForm.addEventListener('submit',(e)=>{
     
     users.push(newUsers)
     setItem('users',users)
-    regForm.reset();
-    return
+    alert('註冊成功! 請重新登入!')
+    window.location.href='./login.html'
 })
 // 登入
 loginForm.addEventListener('submit',(e)=>{

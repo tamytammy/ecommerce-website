@@ -13,11 +13,13 @@
     padding: 30px 0;
     overflow-x: hidden;
     .check-progress{
+        width: 100%;
         display: flex;
+        justify-content: center;
         gap: 5px;
         div{
             height: 5px;
-            width: 150px;
+            width: 30%;
             background-color: #ccc;
             position: relative;
             color: #ccc;
@@ -88,12 +90,15 @@
             margin-bottom: 5px;
             padding: 10px ;
             &-img{
-                width: 30%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
                 img{
-                    width:50%;
+                    width: auto;
+                    height: 100%;
                 }
             }
             

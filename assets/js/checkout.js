@@ -82,6 +82,61 @@ function renderCheckInfo(){
     })
 }
 
+function goCheck(){
+    const users = getItemTep('users') || []
+    const user = users.find(u => u.username === getItem('loggedInStatus'))
+    const checkInfo = user.orders
+
+    if(checkInfo[0].checkPay == "行動支付"){
+        checkoutLinePay()
+    }else if(checkInfo[0].checkPay == "信用卡"){
+        alert(checkInfo[0].checkPay)
+    }else if(checkInfo[0].checkPay == "ATM虛擬帳號繳款"){
+        window.location.href="./ecpay-atm.html"
+    }
+}
+//line pay
+ function checkoutLinePay() {
+      fetch("https://run.mocky.io/v3/34664c2e-b877-4a36-a555-9c7073a28f44", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          amount: 100,
+          currency: "TWD",
+          orderId: "MKSI_S_20180904_1000001",
+          packages: [
+            {
+              id: "1",
+              amount: 100
+            }
+          ],
+          redirectUrls: {
+            confirmUrl: "https://pay-store.line.com/order/payment/authorize",
+            cancelUrl: "https://pay-store.line.com/order/payment/cancel"
+          }
+        })
+      })
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("伺服器回應失敗");
+        }
+        return res.json();
+      })
+      .then(data => {
+        console.log("Mocky回傳資料:", data);
+        if (data.returnCode === "0000") {
+          window.location.href = data.info.paymentUrl.web;
+        } else {
+          alert('付款失敗: ' + data.returnMessage);
+        }
+      })
+      .catch(err => {
+        console.error("錯誤", err);
+        alert('模擬付款 API 呼叫失敗!');
+      });
+    }
 //點擊nextBtn前往下一步驟，下一個div data-step="2"
 $(document).on('click', '.nextBtn', function(){
     const num = $(this).data('step')

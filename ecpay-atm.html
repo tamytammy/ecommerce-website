@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>綠界 ATM 測試付款</title>
+  <style>
+    body {
+      font-family: "微軟正黑體", sans-serif;
+      background: #f4f4f4;
+      padding: 2em;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .card {
+      background: white;
+      display: inline-block;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .btn {
+      background-color: #00b900;
+      color: white;
+      padding: 0.8em 2em;
+      border: none;
+      font-size: 1.1em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1em;
+    }
+    .btn:hover {
+      background-color: #009e00;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>綠界 ATM 測試付款</h1>
+    <p>點選下方按鈕，模擬產生虛擬帳號</p>
+    <button class="btn" onclick="submitECPayForm()">產生 ATM 虛擬帳號</button>
+  </div>
+
+  <form id="ecpayForm" method="post" action="https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5">
+    <input type="hidden" name="MerchantID" value="2000132">
+    <input type="hidden" name="MerchantTradeNo" value="TAMMYTEST123456789">
+    <input type="hidden" name="MerchantTradeDate" value="2025/04/25 17:30:00">
+    <input type="hidden" name="PaymentType" value="aio">
+    <input type="hidden" name="TotalAmount" value="1000">
+    <input type="hidden" name="TradeDesc" value="測試訂單">
+    <input type="hidden" name="ItemName" value="測試商品">
+    <input type="hidden" name="ReturnURL" value="http://localhost:5500/confirm.html">
+    <input type="hidden" name="ChoosePayment" value="ATM">
+    <input type="hidden" name="EncryptType" value="1">
+    <!-- ✅ 正確重新產生的 CheckMacValue -->
+    <input type="hidden" name="CheckMacValue" value="E1D4AB062C2B8F2DDF816234FC5A4A5C">
+  </form>
+
+  <script>
+    function submitECPayForm() {
+      document.getElementById("ecpayForm").submit();
+    }
+  </script>
+</body>
+</html>

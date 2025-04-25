@@ -484,12 +484,14 @@ main.cart .cart-total-wrapper .cart-next-step button:active {
   overflow-x: hidden;
 }
 .check-container .check-progress {
+  width: 100%;
   display: flex;
+  justify-content: center;
   gap: 5px;
 }
 .check-container .check-progress div {
   height: 5px;
-  width: 150px;
+  width: 30%;
   background-color: #ccc;
   position: relative;
   color: #ccc;
@@ -555,13 +557,16 @@ main.cart .cart-total-wrapper .cart-next-step button:active {
   padding: 10px;
 }
 .order-content .order-cart .order__item-img {
-  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
 }
 .order-content .order-cart .order__item-img img {
-  width: 50%;
+  width: auto;
+  height: 100%;
 }
 .order-content .order-cart .order__item:nth-child(even) {
   background-color: #f8f4ef;

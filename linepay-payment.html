@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LINE Pay - 輸入密碼</title>
+  <style>
+    body {
+      background: #f8f8f8;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 320px;
+    }
+    .logo {
+      background: #06c755;
+      color: white;
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    p {
+      color: #333;
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    .amount {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #06c755;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .note {
+      margin-top: 16px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">LINE Pay</div>
+    <h1>LINE Pay</h1>
+    <p>交易訂單：付款測試</p>
+    <div class="amount">NT$<span class="totalPrice">100</span></div>
+    <input type="password" placeholder="輸入付款密碼" id="password" length="4"/>
+    <button onclick="submitPayment()">確認付款</button>
+    <p class="note">請輸入您在 LINE Pay 或 Money 設定的密碼</p>
+    <p class="note">請輸入四位數字即可</p>
+  </div>
+
+  <script>
+    function submitPayment() {
+      const pwd = document.getElementById('password').value;
+      if (pwd.trim() === '') {
+        alert('請輸入密碼');
+        return;
+      }
+      // 模擬 loading 延遲
+      setTimeout(() => {
+        window.location.href = 'linepay-complete.html';
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
