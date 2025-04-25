@@ -8,19 +8,24 @@
 
 - 會員註冊、登入(以localStorage作為資料儲存區域) (2025/04/14新增)
 - 商品列表展示（jQuery 配合JSON檔案 動態渲染）(2025/04/15新增)
-  - 延伸練習 1.分頁 2.分類 3.搜尋
-- 商品加入購物車，存進會員資料庫
-- 購物車細節(商品數量增減、金額計算、icon更新)
+  - 分頁 
+  - 分類 
+  - 搜尋(尚未製作)
+- 商品加入購物車，存進會員資料庫(2025/04/22新增)
+- 購物車(2025/04/24新增)
+  - 商品數量增減、移除
+  - 金額計算
+  - icon更新
 - 結帳頁面(模擬真實結帳，保存歷史訂單)
-
+ - 練習串接金流系統API
 ---
 
 ## 使用技術
 
 - HTML5 / CSS3 / SASS(SCSS)
 - JavaScript / jQuery
-- jQuery Ajax（若有模擬串接 API）
-- localStorage（模擬儲存購物車資料）
+- Ajax fetch（若有模擬串接 API）
+- localStorage sessionStorage（模擬儲存購物車資料）
 
 ---
 
@@ -31,6 +36,10 @@
 <!-- ![首頁畫面](./images/screenshot-home.png) -->
 
 購物車畫面：
+
+<!-- ![購物車畫面](./images/screenshot-cart.png) -->
+
+結帳畫面：
 
 <!-- ![購物車畫面](./images/screenshot-cart.png) -->
 

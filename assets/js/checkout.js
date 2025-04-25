@@ -1,11 +1,12 @@
+//付款使用暫存資料庫
 function setItemTep(key, value){
     sessionStorage.setItem(key, JSON.stringify(value))
 }
-
 function getItemTep(key){
     return JSON.parse(sessionStorage.getItem(key))
 }
 
+//儲存到使用者orders
 function saveInfoTemp(){
     //抓html元素的值、存進sessionStorage
     const checkUsername = document.getElementById('checkout-name').value
@@ -32,11 +33,12 @@ function saveInfoTemp(){
     setItem('users', users)
     setItemTep('users', [user])
 }
+//渲染結帳頁面-購物車
 function renderCheckout(){
     const loginUser = getItem('loggedInStatus')
     let users = getItem('users') || []
     const user = users.find(u => u.username === loginUser)
-
+    let orderTotal = 0
     cartData = user.cart || []
     $('.order-cart').empty()
     cartData.forEach(data => {
@@ -54,9 +56,12 @@ function renderCheckout(){
                      <span class="itemPrice">${data.price}</span>
                     </div>
             </div>
-        `)     
+        `)
+         orderTotal += data.price * data.quantity  
     })
+    $('.order__item-total-price').text(orderTotal) 
 }
+//渲染結帳頁面-個人付款資訊
 function renderCheckInfo(){
     let users = getItemTep('users') || []
     const user = users.find(u => u.username === getItem('loggedInStatus'))
@@ -76,6 +81,7 @@ function renderCheckInfo(){
         `)
     })
 }
+
 //點擊nextBtn前往下一步驟，下一個div data-step="2"
 $(document).on('click', '.nextBtn', function(){
     const num = $(this).data('step')
