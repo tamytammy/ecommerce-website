@@ -102,13 +102,13 @@
                         <div class="check__title" data-step="1">
                         <h1>個人資料</h1>
                         <form data-step="1">
-                            <label for="name">姓名<input type="text" id="name"></label>
+                            <label for="checkout-name">姓名<input type="text" id="checkout-name"></label>
                             
-                            <label for="phone">電話<input type="text" id="phone"></label>
+                            <label for="checkout-phone">電話<input type="text" id="checkout-phone"></label>
                             
-                            <label for="mail">電子郵件<input type="email" id="mail"></label>
+                            <label for="checkout-mail">電子郵件<input type="email" id="checkout-mail"></label>
                             
-                            <label for="address">地址<input type="text" id="address"></label>
+                            <label for="checkout-address">地址<input type="text" id="checkout-address"></label>
                             
                             <button type="button" class="nextBtn" data-step="1">下一步:付款資訊</button>   
                         </form>
@@ -116,8 +116,8 @@
                     <div class="check__title" data-step="2">
                         <h1>付款資訊</h1>
                         <form data-step="2">
-                            <label for="name">付款方式
-                                <select name="payment" id="payment">
+                            <label for="checkout-payment">付款方式
+                                <select name="payment" id="checkout-payment">
                                     <option value="貨到付款">貨到付款</option>
                                     <option value="信用卡">信用卡</option>
                                     <option value="行動支付">LINE PAY</option>
@@ -148,9 +148,44 @@
                         <form data-step="3">
                             <div class="order-content">
                                 <p>購物車資訊</p>
+                                <div class="order-cart">
+                                    <div class="order__item order-title">
+                                        <p></p>
+                                        <div class="order__item-img">
+                                        </div>
+                                        <div class="order__item-amount">
+                                            數量
+                                        </div>
+                                        <div class="order__item-price">
+                                            金額
+                                        </div>
+                                    </div>
+                                    <div class="order__item">
+                                        <p>商品名稱</p>
+                                        <div class="order__item-img">
+                                            <img src="./assets/img/24.png" alt="商品圖示">
+                                        </div>
+                                        <div class="order__item-amount">
+                                            <span class="itemNum">1</span>
+                                        </div>
+                                        <div class="order__item-price">
+                                            $
+                                            <span class="itemPrice">100</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="personal-content">
                                 <p>個人資訊</p>
+                                <div class="personal__info">
+                                    <div class="personal__info-text">
+                                        <p>姓名：<span></span></p>
+                                        <p>電話：<span></span></p>
+                                        <p>Email：<span></span></p>
+                                        <p>收件地址：<span></span></p>
+                                        <p>付款方式：<span></span></p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="order-ps">
                                 <h4>訂單備註</h4>

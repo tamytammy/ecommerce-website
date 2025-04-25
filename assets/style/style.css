@@ -538,4 +538,32 @@ main.cart .cart-total-wrapper .cart-next-step button:active {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.order-content .order-cart .order__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+.order-content .order-cart .order__item-img {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-content .order-cart .order__item-img img {
+  width: 50%;
+}
+.order-content .order-cart .order__item:nth-child(even) {
+  background-color: #f8f4ef;
+}
+
+.personal-content .personal__info {
+  padding: 10px;
+  border-left: 2px solid #ccc;
+}
+.personal-content .personal__info-text p {
+  padding: 5px;
 }/*# sourceMappingURL=style.css.map */
