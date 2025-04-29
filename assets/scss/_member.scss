@@ -74,6 +74,90 @@
         align-items: center;
         min-height: 400px;
         margin: 50px 0;
+        .member-info{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button{
+                width: 50px;
+                height: 30px;
+            }
+        }
+        .member-detail{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .detail__box{
+                height: 100px;
+                width: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ef9999;
+                border-radius: 15px;
+                &-1{
+                    margin-right: 30px;
+                }
+                a{
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #303030;
+                    &:hover{
+                        color: black;
+                    }
+                }
+            }
+        }
+        .order-detail{
+            width: 100%;
+            .order-box{
+            border: 1px solid black;
+                .order-list{
+                        list-style: none;
+                    li{
+                        .list-top{
+                        position: relative;
+                        padding: 10px 20px;
+                        border-bottom: 1px solid black;
+                            .list-open{
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                        }
+                        }
+                        .list-bottom{
+                            margin-top: 30px;
+                            border: 1px solid #ccc;
+                            transform: translateY(-100%);
+                            display: none;
+                            .order__table  {
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                                &-name{
+                                    width:50%;
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 20px;
+                                    .img{
+                                        img{
+                                            width: 100px;
+                                            height: auto;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .open{
+                            transform: translateY(0);
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        
     }
     
 }

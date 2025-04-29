@@ -27,6 +27,7 @@ $(document).ready(function(){
         $('.product').hide();
         $('.member').hide();
         $('.check').hide();
+        $('.confirm').hide();
 
         pageDivider(filtered) // 篩選後重新分頁與渲染
     })

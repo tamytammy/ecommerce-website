@@ -99,8 +99,6 @@ function saveOrders(){
 
   user.orders[0] = createOrder
   setItem('users', users)
-  renderConfirmPage()
-  
 }
 
 function goCheck(){
@@ -120,7 +118,7 @@ function goCheck(){
     }
 }
 //line pay
- function checkoutLinePay() {
+function checkoutLinePay() {
       fetch("https://run.mocky.io/v3/34664c2e-b877-4a36-a555-9c7073a28f44", {
         method: "POST",
         headers: {
@@ -160,7 +158,7 @@ function goCheck(){
         console.error("錯誤", err);
         alert('模擬付款 API 呼叫失敗!');
       });
-    }
+}
   
 //credit card
 
@@ -225,7 +223,6 @@ function renderConfirmPage(){
   const users = getItem('users') || []
   const user = users.find(u => u.username === loginUser)
   const orderInfo = user.orders[0]
-  console.log(orderInfo)
   $('.order-num').text(orderInfo.createdNumber)
   $('.order-date').text(orderInfo.createdDate)
   $('.order-price').text(orderInfo.orderPrice)
@@ -234,3 +231,9 @@ function renderConfirmPage(){
 
   //歷史訂單
 }
+
+
+//confirm page, 歷史訂單
+$(document).ready(function(){
+  renderConfirmPage()
+})
