@@ -540,6 +540,7 @@ main.cart .cart-total-wrapper .cart-next-step button:active {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .order-content .order-title {
@@ -595,4 +596,33 @@ main.cart .cart-total-wrapper .cart-next-step button:active {
 .order-ps textarea {
   width: 100%;
   height: 90px;
+}
+
+.confirm {
+  width: 100%;
+}
+.confirm .confirm-container {
+  border: 1px solid black;
+  min-height: 700px;
+  width: 70%;
+  margin: 0 auto;
+}
+.confirm .confirm-container .confirm__text {
+  border-bottom: 2px solid #ccc;
+  text-align: center;
+}
+.confirm .confirm-container .confirm__order {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px 150px;
+}
+.confirm .confirm-container .confirm__order p {
+  padding: 10px 0;
+}
+.confirm .confirm-container button {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
 }/*# sourceMappingURL=style.css.map */

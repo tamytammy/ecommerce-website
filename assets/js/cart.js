@@ -1,5 +1,6 @@
 $(document).ready(function() {
     updateCartIcon()
+    
     let cartData = []
     let allData = []
     $.ajax({
@@ -147,6 +148,7 @@ function addToCart(product) {
   setItem('users', users)
   alert('已加入購物車！')
   updateCartIcon()
+  updateTotalPrice()
 
 }
 //更新icon數量
@@ -190,16 +192,15 @@ function updateTotalPrice(){
   $('.totalPrice').empty()
   const loginUser = getItem('loggedInStatus')
     let users = getItem('users') || []
+    let user = users.find(u => u.username === loginUser)
     cartData = users.find(u => u.username === loginUser).cart
-
     let totalPrice = 0
     cartData.forEach(data => {
         totalPrice += data.price * data.quantity
     })
+    user.totalAmount = totalPrice
+    setItem('users', users)
     $('.totalPrice').append(totalPrice) 
 }
   
-  
-  
-
 })

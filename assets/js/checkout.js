@@ -6,7 +6,7 @@ function getItemTep(key){
     return JSON.parse(sessionStorage.getItem(key))
 }
 
-//儲存到使用者orders
+//儲存到暫時session(步驟三渲染使用)
 function saveInfoTemp(){
     //抓html元素的值、存進sessionStorage
     const checkUsername = document.getElementById('checkout-name').value
@@ -14,7 +14,7 @@ function saveInfoTemp(){
     const checkMail = document.getElementById('checkout-mail').value
     const checkAdr = document.getElementById('checkout-address').value
     const checkPay = document.getElementById('checkout-payment').value
-
+    
     const checkInfo = {
         checkUsername,
         checkPhone,
@@ -22,6 +22,7 @@ function saveInfoTemp(){
         checkAdr,
         checkPay
     }
+
     const users = getItem('users') || []
     const user = users.find(u => u.username === getItem('loggedInStatus'))
     if(user.orders){
@@ -30,7 +31,6 @@ function saveInfoTemp(){
     }else{
         user.orders.push(checkInfo)
     }
-    setItem('users', users)
     setItemTep('users', [user])
 }
 //渲染結帳頁面-購物車
@@ -82,6 +82,27 @@ function renderCheckInfo(){
     })
 }
 
+function saveOrders(){
+  const loginUser = getItem('loggedInStatus')
+  let users = getItemTep('users') || []
+  const user = users.find(u => u.username === loginUser)
+  let orders = user.orders
+  
+  const createOrder = {
+    createdDate: new Date().toLocaleString(),
+    createdNumber: "LN" + new Date().getTime(),
+    orderPrice : user.totalAmount,
+    orderPayment : orders[0].checkPay,
+    orderAdr : orders[0].checkAdr,
+    orderMail : orders[0].checkMail
+  }
+
+  user.orders[0] = createOrder
+  setItem('users', users)
+  renderConfirmPage()
+  
+}
+
 function goCheck(){
     const users = getItemTep('users') || []
     const user = users.find(u => u.username === getItem('loggedInStatus'))
@@ -89,10 +110,13 @@ function goCheck(){
 
     if(checkInfo[0].checkPay == "行動支付"){
         checkoutLinePay()
+        saveOrders()
     }else if(checkInfo[0].checkPay == "信用卡"){
         alert(checkInfo[0].checkPay)
+        saveOrders()
     }else if(checkInfo[0].checkPay == "ATM虛擬帳號繳款"){
         window.location.href="./ecpay-atm.html"
+        saveOrders()
     }
 }
 //line pay
@@ -102,8 +126,8 @@ function goCheck(){
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-          amount: 100,
+        body: JSON.stringify({ 
+          amount: 1234,
           currency: "TWD",
           orderId: "MKSI_S_20180904_1000001",
           packages: [
@@ -113,8 +137,8 @@ function goCheck(){
             }
           ],
           redirectUrls: {
-            confirmUrl: "https://pay-store.line.com/order/payment/authorize",
-            cancelUrl: "https://pay-store.line.com/order/payment/cancel"
+            confirmUrl: "https://localhost:5500/confirm.html",
+            cancelUrl: "https://localhost:5500/cancel.html"
           }
         })
       })
@@ -137,6 +161,12 @@ function goCheck(){
         alert('模擬付款 API 呼叫失敗!');
       });
     }
+  
+//credit card
+
+//atm
+
+
 //點擊nextBtn前往下一步驟，下一個div data-step="2"
 $(document).on('click', '.nextBtn', function(){
     const num = $(this).data('step')
@@ -188,3 +218,19 @@ $(document).on('click', '.prevBtn', function(){
 
     
 })
+
+//確定訂單內容
+function renderConfirmPage(){
+  const loginUser = getItem('loggedInStatus')
+  const users = getItem('users') || []
+  const user = users.find(u => u.username === loginUser)
+  const orderInfo = user.orders[0]
+  console.log(orderInfo)
+  $('.order-num').text(orderInfo.createdNumber)
+  $('.order-date').text(orderInfo.createdDate)
+  $('.order-price').text(orderInfo.orderPrice)
+  $('.order-adr').text(orderInfo.orderAdr)
+  $('.order-mail').text(orderInfo.orderMail)
+
+  //歷史訂單
+}

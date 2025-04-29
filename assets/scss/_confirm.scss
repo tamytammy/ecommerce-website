@@ -1,0 +1,29 @@
+.confirm{
+    width: 100%;
+    .confirm-container{
+        border: 1px solid black;
+        min-height:700px;
+        width: 70%;
+        margin: 0 auto;
+        .confirm__text{
+            border-bottom: 2px solid #ccc;
+            text-align: center;
+        }
+        .confirm__order{
+            // min-height: 650px;
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px 150px;
+            p{
+                padding: 10px 0;
+            }
+        }
+        button{
+            width: 60%;
+            margin: 0 auto;
+            display: block;
+            margin-top: 30px;
+        }
+    }
+}
