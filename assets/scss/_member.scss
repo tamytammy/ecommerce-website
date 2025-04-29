@@ -84,6 +84,18 @@
                 height: 30px;
             }
         }
+        .backBtn{
+            text-align: left;
+            width:100%;
+            p{
+                font-size: 14px;
+                color: #868686;
+                cursor: pointer;
+                &:hover{
+                    color: #303030;
+                }
+            }
+        }
         .member-detail{
             width: 100%;
             display: flex;
@@ -130,6 +142,7 @@
                             margin-top: 30px;
                             border: 1px solid #ccc;
                             transform: translateY(-100%);
+                            transition: all .3s ease-out;
                             display: none;
                             .order__table  {
                                 display: flex;
@@ -151,6 +164,7 @@
                         }
                         .open{
                             transform: translateY(0);
+                            transition: all .3s ease-out;
                             display: block;
                         }
                     }

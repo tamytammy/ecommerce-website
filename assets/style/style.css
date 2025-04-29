@@ -257,6 +257,18 @@ body {
   width: 50px;
   height: 30px;
 }
+.main-container .member .backBtn {
+  text-align: left;
+  width: 100%;
+}
+.main-container .member .backBtn p {
+  font-size: 14px;
+  color: #868686;
+  cursor: pointer;
+}
+.main-container .member .backBtn p:hover {
+  color: #303030;
+}
 .main-container .member .member-detail {
   width: 100%;
   display: flex;
@@ -305,6 +317,7 @@ body {
   margin-top: 30px;
   border: 1px solid #ccc;
   transform: translateY(-100%);
+  transition: all 0.3s ease-out;
   display: none;
 }
 .main-container .member .order-detail .order-box .order-list li .list-bottom .order__table {
@@ -324,6 +337,7 @@ body {
 }
 .main-container .member .order-detail .order-box .order-list li .open {
   transform: translateY(0);
+  transition: all 0.3s ease-out;
   display: block;
 }
 
