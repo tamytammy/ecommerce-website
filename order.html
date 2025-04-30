@@ -87,124 +87,13 @@
                 <div class="order-detail">
                     <div class="order-box">
                         <ul class="order-list">
-                            <li class="list-1">
-                                <div class="list-top">
-                                    <p>訂單日期：</p>
-                                    <p>訂單編號：</p>
-                                    <p>訂單金額：</p>
-                                    <div class="list-open">
-                                        <button type="button" class="openList">顯示更多</button>
-                                    </div>
-                                </div>
-                                <div class="list-bottom">
-                                    <div class="order__table">
-                                        <div class="order__table-name">
-                                            <h4>商品名稱</h4>
-                                        </div>
-                                    <div class="order__table-quantity">
-                                        商品數量
-                                    </div>
-                                    <div class="order__table-price">
-                                        金額
-                                    </div>
-                                    </div>
-                                    <div class="order__table">
-                                        <div class="order__table-name">
-                                            <div class="img">
-                                                <img src="./assets/img/notfound.png" >
-                                            </div>
-                                            <h4>商品名稱</h4>
-                                        </div>
-                                    <div class="order__table-quantity">
-                                        商品數量
-                                    </div>
-                                    <div class="order__table-price">
-                                        金額
-                                    </div>
-                                    </div>
-                                </div>
-                                
-                            </li>
-                            <li class="list-2">
-                                <div class="list-top">
-                                    <p>訂單日期：</p>
-                                    <p>訂單編號：</p>
-                                    <p>訂單金額：</p>
-                                    <div class="list-open">
-                                        <button type="button" class="openList">顯示更多</button>
-                                    </div>
-                                </div>
-                                <div class="list-bottom">
-                                    <div class="order__table">
-                                        <div class="order__table-name">
-                                            <h4>商品名稱</h4>
-                                        </div>
-                                    <div class="order__table-quantity">
-                                        商品數量
-                                    </div>
-                                    <div class="order__table-price">
-                                        金額
-                                    </div>
-                                    </div>
-                                    <div class="order__table">
-                                        <div class="order__table-name">
-                                            <div class="img">
-                                                <img src="./assets/img/notfound.png" >
-                                            </div>
-                                            <h4>商品名稱</h4>
-                                        </div>
-                                    <div class="order__table-quantity">
-                                        商品數量
-                                    </div>
-                                    <div class="order__table-price">
-                                        金額
-                                    </div>
-                                    </div>
-                                </div>
-                                
-                            </li>
-                            <li class="list-3">
-                                <div class="list-top">
-                                    <p>訂單日期：</p>
-                                    <p>訂單編號：</p>
-                                    <p>訂單金額：</p>
-                                    <div class="list-open">
-                                        <button type="button" class="openList">顯示更多</button>
-                                    </div>
-                                </div>
-                                <div class="list-bottom">
-                                    <div class="order__table">
-                                        <div class="order__table-name">
-                                            <h4>商品名稱</h4>
-                                        </div>
-                                    <div class="order__table-quantity">
-                                        商品數量
-                                    </div>
-                                    <div class="order__table-price">
-                                        金額
-                                    </div>
-                                    </div>
-                                    <div class="order__table">
-                                        <div class="order__table-name">
-                                            <div class="img">
-                                                <img src="./assets/img/notfound.png" >
-                                            </div>
-                                            <h4>商品名稱</h4>
-                                        </div>
-                                    <div class="order__table-quantity">
-                                        商品數量
-                                    </div>
-                                    <div class="order__table-price">
-                                        金額
-                                    </div>
-                                    </div>
-                                </div>
-                                
-                            </li>
+
                             <script>
                                 const openLists = document.querySelectorAll('.openList');
+                                console.log(openLists)
                                 openLists.forEach(o => {
                                     o.addEventListener('click', ()=>{
+                                        console.log('click')
                                         o.parentNode.parentNode.nextElementSibling.classList.toggle('open')
                                     })
                                 })

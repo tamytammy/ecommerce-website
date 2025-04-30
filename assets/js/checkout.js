@@ -5,6 +5,9 @@ function setItemTep(key, value){
 function getItemTep(key){
     return JSON.parse(sessionStorage.getItem(key))
 }
+function removeItemTep(key){
+   sessionStorage.removeItem(key)
+}
 
 //儲存到暫時session(步驟三渲染使用)
 function saveInfoTemp(){
@@ -25,6 +28,8 @@ function saveInfoTemp(){
 
     const users = getItem('users') || []
     const user = users.find(u => u.username === getItem('loggedInStatus'))
+    //先清空使用者原先的orders,避免錯誤
+    user.orders = []
     if(user.orders){
         //if there is already have the checkInfo in the orders, just update it with the new one
         user.orders[0] = checkInfo        
@@ -82,24 +87,34 @@ function renderCheckInfo(){
     })
 }
 
+//確認結帳時儲存訂單
 function saveOrders(){
   const loginUser = getItem('loggedInStatus')
-  let users = getItemTep('users') || []
+  let users = getItem('users') || []
   const user = users.find(u => u.username === loginUser)
-  let orders = user.orders
   
+  //暫存
+  let usersTep = getItemTep('users') || []
+  const userTep = usersTep.find(u => u.username === loginUser)
+  let orders = userTep.orders
+
   const createOrder = {
     createdDate: new Date().toLocaleString(),
     createdNumber: "LN" + new Date().getTime(),
     orderPrice : user.totalAmount,
     orderPayment : orders[0].checkPay,
     orderAdr : orders[0].checkAdr,
-    orderMail : orders[0].checkMail
+    orderMail : orders[0].checkMail,
+    items: userTep.cart
   }
-
-  user.orders[0] = createOrder
+  
+  user.orders.push(createOrder)
+  user.cart = []
   setItem('users', users)
+  removeItemTep('users')
 }
+
+
 
 function goCheck(){
     const users = getItemTep('users') || []
@@ -119,7 +134,7 @@ function goCheck(){
 }
 //line pay
 function checkoutLinePay() {
-      fetch("https://run.mocky.io/v3/34664c2e-b877-4a36-a555-9c7073a28f44", {
+      fetch("https://run.mocky.io/v3/b408f9ac-174f-46b3-abc0-655c9451022c", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -222,7 +237,7 @@ function renderConfirmPage(){
   const loginUser = getItem('loggedInStatus')
   const users = getItem('users') || []
   const user = users.find(u => u.username === loginUser)
-  const orderInfo = user.orders[0]
+  const orderInfo = user.orders[user.orders.length - 1]
   $('.order-num').text(orderInfo.createdNumber)
   $('.order-date').text(orderInfo.createdDate)
   $('.order-price').text(orderInfo.orderPrice)
@@ -232,8 +247,58 @@ function renderConfirmPage(){
   //歷史訂單
 }
 
+function renderOrderPage(){
+  const loginUser = getItem('loggedInStatus')
+  const users = getItem('users') || []
+  const user = users.find(u => u.username === loginUser)
+  const orderInfos = user.orders
+  orderInfos.forEach(info=>{
+    $('.order-list').append(`
+        <li>
+          <div class="list-top">
+              <p>訂單日期：${info.createdDate}</p>
+              <p>訂單編號：${info.createdNumber}</p>
+              <p>訂單金額：NT$${info.orderPrice}</p>
+              <div class="list-open">
+                <button type="button" class="openList">顯示更多</button>
+              </div>
+          </div>
+          <div class="list-bottom">
+          </div>                 
+        </li>
+    `)
+    const cartItems = info.items
+    cartItems.forEach(item => {
+      $('.list-bottom').append(`
+          <div class="order__table">
+            <div class="order__table-name">
+              <div class="img">
+                <img src="${item.image}">
+              </div>
+              <h4>${item.name}</h4>
+            </div>
+            <div class="order__table-quantity">
+              ${item.quantity}
+            </div>
+            <div class="order__table-price">
+              ${item.price}
+            </div>
+          </div>
+      `)
+    })
+  })
+  const openLists = document.querySelectorAll('.openList');
+  openLists.forEach(o => {
+     o.addEventListener('click', ()=>{
+      console.log('click')
+      o.parentNode.parentNode.nextElementSibling.classList.toggle('open')
+    })
+  })
+}
+
 
 //confirm page, 歷史訂單
 $(document).ready(function(){
   renderConfirmPage()
+  renderOrderPage()
 })

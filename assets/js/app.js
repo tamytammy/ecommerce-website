@@ -92,8 +92,6 @@ $(document).ready(function(){
 
             renderProducts(productToShow)
 
-            //樣式
-
         })
         
 
