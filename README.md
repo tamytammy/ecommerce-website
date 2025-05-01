@@ -39,11 +39,11 @@
 
 購物車畫面：
 
-<!-- ![購物車畫面](./images/screenshot-cart.png) -->
+<!-- ![購物車畫面](./assets/img/cart) -->
 
 結帳畫面：
 
-<!-- ![購物車畫面](./images/screenshot-cart.png) -->
+<!-- ![結帳畫面](./assets/img/checkout) -->
 
 
 ---
