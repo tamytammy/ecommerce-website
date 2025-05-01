@@ -13,6 +13,8 @@ regForm.addEventListener('submit',(e)=>{
     const username = document.getElementById('username').value.trim();
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
+    const mail = document.getElementById('mail').value;
+    
 
     if(!username || !password || !confirmPassword){
         regText.textContent = '請輸入帳號密碼!'
@@ -29,6 +31,7 @@ regForm.addEventListener('submit',(e)=>{
     const newUsers = {
         username,
         password,
+        mail,
         createdAt:new Date().getTime(),
         totalAmount:0,
         cart:[],

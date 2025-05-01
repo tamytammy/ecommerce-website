@@ -124,6 +124,7 @@ function goCheck(){
     if(checkInfo[0].checkPay == "行動支付"){
         checkoutLinePay()
         saveOrders()
+        sendEmail()
     }else if(checkInfo[0].checkPay == "信用卡"){
         alert(checkInfo[0].checkPay)
         saveOrders()
@@ -255,6 +256,7 @@ function renderOrderPage(){
 
   const orderList = document.querySelector('.order-list')
   orderList.innerHTML = ''
+
   orderInfos.forEach(info=>{
   const wrapper = document.createElement('div')
    wrapper.innerHTML = `
@@ -296,12 +298,35 @@ function renderOrderPage(){
     })
     orderList.appendChild(li)
   })
+
   const openLists = document.querySelectorAll('.openList');
   openLists.forEach(o => {
      o.addEventListener('click', ()=>{
       console.log('click')
       o.parentNode.parentNode.nextElementSibling.classList.toggle('open')
     })
+  })
+}
+function sendEmail() {
+  const loginUser = getItem('loggedInStatus')
+  const users = getItem('users') || []
+  const user= users.find(u => u.username === loginUser)
+  const order = user.orders[user.orders.length - 1]
+
+  // 🔔 發送訂單確認信
+  emailjs.send('service_ztlwryn', 'template_xzl35ni', {
+    user_name: user.username,
+    email: user.mail,
+    order_id: order.createdNumber,
+    order_date: order.createdDate,
+    order_address: order.orderAdr,
+    order_total: order.orderPrice
+  }, 'IORAtnHPNX4StmAN4')
+  .then(() => {
+    alert('訂單成立，確認信已寄出！')
+  })
+  .catch((error) => {
+    alert('訂單已建立，但確認信寄送失敗：' + error.text)
   })
 }
 
