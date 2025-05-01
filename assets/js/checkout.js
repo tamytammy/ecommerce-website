@@ -245,7 +245,6 @@ function renderConfirmPage(){
   $('.order-adr').text(orderInfo.orderAdr)
   $('.order-mail').text(orderInfo.orderMail)
 
-  //歷史訂單
 }
 
 function renderOrderPage(){
@@ -253,7 +252,6 @@ function renderOrderPage(){
   const users = getItem('users') || []
   const user = users.find(u => u.username === loginUser)
   const orderInfos = user.orders
-
   const orderList = document.querySelector('.order-list')
   orderList.innerHTML = ''
 
@@ -276,8 +274,8 @@ function renderOrderPage(){
     
     const li = wrapper.firstElementChild
     const listBottom = li.querySelector('.list-bottom')
-
-    info.items.forEach(item => {
+    const infoItems = info.items
+    infoItems.forEach(item => {
       const orderItemHtml = `
           <div class="order__table">
             <div class="order__table-name">
