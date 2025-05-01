@@ -1,14 +1,19 @@
 .product{
+    padding-bottom: 20px;
     .product__container{
         display: flex;
         flex-direction: column;
         gap: 50px;
+
         &-top{
             display: flex;
             width: 60%;
             margin: 0 auto;
+            padding: 0 20px;
             justify-content: center;
             flex-wrap: wrap;
+            background-color: #fafafa;
+            border-radius: 6.5px;
             .top__img{
                 width: 40%;
                 min-width: 200px;
@@ -24,13 +29,12 @@
                 width: 60%;
                 padding: 50px 100px;
                 h3{
-
+                    font-size: 30px;
                     padding: 20px 0;
                 }
                 &-info{
 
                     margin: 50px 0 100px;
-                    min-height: 150px;
                     span{
                         color: #fff;
                         background-color: red;
@@ -38,7 +42,19 @@
                     }
                 }
                 &-amount{
-                    
+                    padding: 10px 0;
+                    input{
+                        outline: none;
+                        border: 1px solid #ccc;
+                        width: 50px;
+                        border-radius: 6.5px;
+                        display: inline-block;
+                        padding: 5px 10px ;
+                        text-align: center;
+                    }
+                    span{
+                        float: right;
+                    }
                 }
                 button{
                     width: 100%;
