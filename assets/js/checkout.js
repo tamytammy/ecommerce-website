@@ -252,8 +252,12 @@ function renderOrderPage(){
   const users = getItem('users') || []
   const user = users.find(u => u.username === loginUser)
   const orderInfos = user.orders
+
+  const orderList = document.querySelector('.order-list')
+  orderList.innerHTML = ''
   orderInfos.forEach(info=>{
-    $('.order-list').append(`
+  const wrapper = document.createElement('div')
+   wrapper.innerHTML = `
         <li>
           <div class="list-top">
               <p>訂單日期：${info.createdDate}</p>
@@ -266,10 +270,13 @@ function renderOrderPage(){
           <div class="list-bottom">
           </div>                 
         </li>
-    `)
-    const cartItems = info.items
-    cartItems.forEach(item => {
-      $('.list-bottom').append(`
+    `
+    
+    const li = wrapper.firstElementChild
+    const listBottom = li.querySelector('.list-bottom')
+
+    info.items.forEach(item => {
+      const orderItemHtml = `
           <div class="order__table">
             <div class="order__table-name">
               <div class="img">
@@ -284,8 +291,10 @@ function renderOrderPage(){
               ${item.price}
             </div>
           </div>
-      `)
+      `
+      listBottom.innerHTML += orderItemHtml
     })
+    orderList.appendChild(li)
   })
   const openLists = document.querySelectorAll('.openList');
   openLists.forEach(o => {
