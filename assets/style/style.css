@@ -20,11 +20,11 @@ body {
   align-items: center;
   position: relative;
   z-index: 1;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .header-container .header__logo h1 {
   cursor: pointer;
+  padding: 0 15px;
 }
 .header-container .header__navbar {
   position: relative;
@@ -55,15 +55,26 @@ body {
 .header-container .header__navbar-link .box3 {
   left: 240px;
 }
+.header-container .header__btns {
+  padding-right: 15px;
+}
 .header-container .header__btns button {
   outline: none;
   border: none;
   background-color: transparent;
   display: inline-block;
   padding: 5px 10px;
-  background-color: cadetblue;
+  border-radius: 6.5px;
+  border: 1px solid #5f9ea0;
+  background-color: #fff;
+  color: #487778;
   cursor: pointer;
   position: relative;
+  transition: all 0.3s ease-out;
+}
+.header-container .header__btns button:hover {
+  background-color: transparent;
+  color: #466d6e;
 }
 .header-container .header__btns button span {
   height: 15px;
@@ -73,6 +84,7 @@ body {
   left: 0;
   background-color: #fff;
   border-radius: 100px;
+  border: 1px solid #ccc;
 }
 
 .main-container .main {
@@ -88,15 +100,20 @@ body {
   height: 500px;
   position: sticky;
   top: 0;
-  background-color: aquamarine;
+  border-top: 5px solid #ccc;
 }
 .main-container .main .aside ul {
   width: 100%;
+  padding: 30px 0;
 }
 .main-container .main .aside ul li {
   list-style: none;
   padding: 10px;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.main-container .main .aside ul li:hover {
+  background-color: #fafafa;
 }
 .main-container .main .aside_right {
   display: flex;
@@ -112,24 +129,33 @@ body {
 }
 .main-container .main .aside_right .products .product-box {
   height: 300px;
-  border: 1px solid black;
+  background-color: #fafafa;
+  border-radius: 6.5px;
   position: relative;
 }
 .main-container .main .aside_right .products .product-box__img {
   width: 100%;
   height: 200px;
-  border: 1px solid red;
+  background-color: #fff;
+  border-radius: 6.5px 6.5px 0 0;
 }
 .main-container .main .aside_right .products .product-box__text {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.main-container .main .aside_right .products .product-box__text-name {
+  width: 100%;
+  padding-top: 30px;
+}
+.main-container .main .aside_right .products .product-box__text-detail {
+  padding-top: 50px;
+}
 .main-container .main .aside_right .products .product-box .addCart-btn {
   position: absolute;
   top: -10px;
   right: -10px;
-  background-color: orange;
+  background-color: rgb(238, 194, 113);
   height: 40px;
   width: 40px;
   display: flex;
@@ -140,6 +166,10 @@ body {
   transition: all 0.2s ease-out;
   display: none;
 }
+.main-container .main .aside_right .products .product-box .addCart-btn:hover {
+  background-color: rgb(240, 175, 54);
+  transform: scale(1.05);
+}
 .main-container .main .aside_right .products .product-box:hover .addCart-btn {
   display: flex;
 }
@@ -149,15 +179,19 @@ body {
 .main-container .main .aside_right .pageSelector button {
   outline: none;
   background-color: transparent;
-  border: 1px solid seagreen;
+  border: none;
   cursor: pointer;
 }
 .main-container .main .aside_right .pageSelector button span {
   display: inline-block;
   padding: 10px 15px;
-  background-color: cadetblue;
-  color: #fff;
+  background-color: #ffd2bf;
+  color: #303030;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.4);
   border-radius: 100%;
+}
+.main-container .main .aside_right .pageSelector button span:hover {
+  background-color: #f8af90;
 }
 
 .footer-container {
@@ -314,7 +348,6 @@ body {
   bottom: 0;
 }
 .main-container .member .order-detail .order-box .order-list li .list-bottom {
-  margin-top: 30px;
   border: 1px solid #ccc;
   transform: translateY(-100%);
   transition: all 0.3s ease-out;
@@ -718,4 +751,6 @@ main.cart .cart-total-wrapper .cart-next-step button:active {
   margin: 0 auto;
   display: block;
   margin-top: 30px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
