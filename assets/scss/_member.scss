@@ -30,6 +30,17 @@
                         align-items: center;
                         gap:10px;
                         }
+                        input{
+                background-color: #ffffff6c;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #303030;
+                padding: 0 5px ;
+                height: 20px;
+                &:focus{
+                    border: 1px solid #303030;
+                }
+            }
                     }
                     button{
                         outline: none;
@@ -46,9 +57,21 @@
         text-align: center;
         .form-group{
             padding: 10px 0;
+            text-align: left;
             label{
                 display: inline-block;
                 padding: 5px 0;
+            }
+            input{
+                background-color: #ffffff6c;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #303030;
+                padding: 0 5px ;
+                height: 20px;
+                &:focus{
+                    border: 1px solid #303030;
+                }
             }
             span{
                 color: red;
@@ -80,8 +103,16 @@
             justify-content: space-between;
             align-items: center;
             button{
-                width: 50px;
+                width: 100px;
                 height: 30px;
+                border: none;
+                border-radius: 100px;
+                background-color: #ffebcd;
+                cursor: pointer;
+                transition: all .3s ease-out;
+                &:hover{
+                    background-color: #fdc674;
+                }
             }
         }
         .backBtn{
@@ -124,22 +155,37 @@
         .order-detail{
             width: 100%;
             .order-box{
-            border: 1px solid black;
                 .order-list{
                         list-style: none;
                     li{
                         .list-top{
                         position: relative;
                         padding: 10px 20px;
-                        border-bottom: 1px solid black;
+                        border-bottom: 1px solid #ccc;
                             .list-open{
                             position: absolute;
                             right: 0;
                             bottom: 0;
+                            button{
+                                border: 1px solid #5f5f5f;
+                                outline: none;
+                                background-color: transparent;
+                                display: inline-block;
+                                padding: 5px 10px;
+                                border-radius: 15px;
+                                font-size: 12px;
+                                color: #5f5f5f;
+                                cursor: pointer;
+                                transition: all .3s ease-out;
+                                margin: 5px 0;
+                                &:hover{
+                                    color: #303030;
+                                }
+                            }
                         }
                         }
                         .list-bottom{
-                            border: 1px solid #ccc;
+                            background-color: #ccc;
                             transform: translateY(-100%);
                             transition: all .3s ease-out;
                             display: none;
