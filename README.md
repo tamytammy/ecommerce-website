@@ -35,7 +35,7 @@
 
 首頁預覽：
 
-![首頁畫面](.assets/img/index.png)
+![首頁畫面](./assets/img/index.png)
 
 購物車畫面：
 
