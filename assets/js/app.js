@@ -133,14 +133,27 @@ $(document).ready(function(){
             location.href = './login.html';
         }
     })
-    function updateUser(updatedUser) {
-        let users = getItem('users') || []
-        const index = users.findIndex(u => u.username === updatedUser.username)
-        if (index !== -1) {
-            users[index] = updatedUser
-            setItem('users', users)
-        }
-    }
+
+    let productData = []
+    $.getJSON('/assets/data/products.json', function(data){
+        productData = data
+
+        $('#search-input').on('input', function(){
+        const keyword = this.value.trim()
+        const keywords = keyword.split(/\s+/)
+        
+        let searchData = productData.filter(item=>
+         keywords.every(word=>item.name.includes(word))
+        )
+
+        pageDivider(searchData)
+        
+    })
+
+
+    });
+
+    
 
 
     
