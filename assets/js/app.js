@@ -13,6 +13,7 @@ function removeItem(key){
 $(document).ready(function(){
     
     let allData = [];
+    let productData = []
     let currentCategory = "all"
     //分類按鈕
     $('.category-bar').on('click', '.filter-btn', function(){
@@ -40,11 +41,12 @@ $(document).ready(function(){
         type: 'GET',
         success:function(data){
             allData = data
+            productData = data
             pageDivider(allData)
             productDetail(allData)
         },
-        erroo:function(itemData){
-            alert('Get JSON檔案失敗!')
+        error:function(err){
+            alert('Get JSON檔案失敗!:'+ err)
         }
     })
 
@@ -133,12 +135,8 @@ $(document).ready(function(){
             location.href = './login.html';
         }
     })
-
-    let productData = []
-    $.getJSON('/assets/data/products.json', function(data){
-        productData = data
-
-        $('#search-input').on('input', function(){
+    //即時搜尋功能
+    $('#search-input').on('input', function(){
         const keyword = this.value.trim()
         const keywords = keyword.split(/\s+/)
         
@@ -149,9 +147,7 @@ $(document).ready(function(){
         pageDivider(searchData)
         
     })
-
-
-    });
+    
 
     
 

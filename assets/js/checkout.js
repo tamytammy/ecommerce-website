@@ -31,7 +31,6 @@ function saveInfoTemp(){
     //先清空使用者原先的orders,避免錯誤
     user.orders = []
     if(user.orders){
-        //if there is already have the checkInfo in the orders, just update it with the new one
         user.orders[0] = checkInfo        
     }else{
         user.orders.push(checkInfo)
@@ -135,7 +134,7 @@ function goCheck(){
 }
 //line pay
 function checkoutLinePay() {
-      fetch("https://run.mocky.io/v3/b408f9ac-174f-46b3-abc0-655c9451022c", {
+      fetch("https://run.mocky.io/v3/7ee73ae9-37ac-4de1-84cd-09ae6220a721", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
