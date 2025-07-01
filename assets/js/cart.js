@@ -89,12 +89,16 @@ $('.cart-wrapper').on('click','.increaseBtn', function(){
     let users = getItem('users') || []
     cartData = users.find(u => u.username === loginUser).cart
 
+    let productVal = $(this).siblings('.product-quantity').val()
+    productVal++
+
     let product = cartData.find(p => p.id == productId)
     product.quantity++
     if(product.quantity > 10){
       alert('購買數量過大，請聯繫客服協助!')
     }
-    
+
+     $(this).siblings('.product-quantity').val(productVal);
     setItem('users', users)
     updateTotalPrice()
     updateCartIcon()
@@ -107,16 +111,18 @@ $('.cart-wrapper').on('click','.decreaseBtn', function(){
     cartData = users.find(u => u.username === loginUser).cart
 
     let product = cartData.find(p => p.id == productId)
-    
-
-    if(product.quantity == 0){
-      removeCartItem(productId)
-    }else{
+    let productVal = $(this).siblings('.product-quantity').val()
+    if(product.quantity > 1 && productVal > 1){
       product.quantity--
+      productVal--
+      $(this).siblings('.product-quantity').val(productVal);
+      setItem('users', users)
+      updateTotalPrice()
+      updateCartIcon()
+    }else if(product.quantity == 1 && productVal == 1){
+      removeCartItem(productId)
     }
-    setItem('users', users)
-    updateTotalPrice()
-    updateCartIcon()
+
 
     if(cartData.length == 0){
       $('.cart__table').hide();
