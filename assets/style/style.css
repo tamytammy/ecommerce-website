@@ -213,6 +213,8 @@ body {
 
 .footer-container {
   width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 .footer-container .footer {
   min-height: 150px;

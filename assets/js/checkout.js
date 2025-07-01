@@ -150,8 +150,8 @@ function checkoutLinePay() {
             }
           ],
           redirectUrls: {
-            confirmUrl: "https://localhost:5500/confirm.html",
-            cancelUrl: "https://localhost:5500/cancel.html"
+            confirmUrl: "https://localhost:5501/confirm.html",
+            cancelUrl: "https://localhost:5501/cancel.html"
           }
         })
       })
