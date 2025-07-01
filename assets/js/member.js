@@ -61,8 +61,10 @@ loginForm.addEventListener('submit',(e)=>{
     }
     setItem('loggedInStatus',loginUsername)
     alert('登入成功')
+    // document.querySelector('.loginName').textContent = loginUsername
     window.location.href='./member.html'
-    loginUI(loginUsername)
+    // document.querySelector('.loginName').textContent = loginUsername
+    // loginUI(loginUsername)
     loginForm.reset()
     
     
