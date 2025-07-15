@@ -122,8 +122,8 @@ function goCheck(){
 
     if(checkInfo[0].checkPay == "行動支付"){
         checkoutLinePay()
-        saveOrders()
-        sendEmail()
+        // saveOrders()
+        // sendEmail()
     }else if(checkInfo[0].checkPay == "信用卡"){
         alert(checkInfo[0].checkPay)
         saveOrders()
@@ -134,24 +134,29 @@ function goCheck(){
 }
 //line pay
 function checkoutLinePay() {
-      fetch("https://run.mocky.io/v3/7ee73ae9-37ac-4de1-84cd-09ae6220a721", {
+  const loginUser = getItem('loggedInStatus')
+  let users = getItem('users') || []
+  const user = users.find(u => u.username === loginUser)
+  console.log(user)
+
+      fetch("https://tamytammy.free.beeceptor.com/checkout-linepay", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({ 
-          amount: 1234,
+          amount: user.totalAmount,
           currency: "TWD",
           orderId: "MKSI_S_20180904_1000001",
           packages: [
             {
               id: "1",
-              amount: 100
+              amount: user.totalAmount
             }
           ],
           redirectUrls: {
-            confirmUrl: "https://localhost:5501/confirm.html",
-            cancelUrl: "https://localhost:5501/cancel.html"
+            confirmUrl: "https://tamytammy.github.io/ecommerce-website/confirm.html",
+            cancelUrl: "https://tamytammy.github.io/ecommerce-website/cancel.html"
           }
         })
       })
@@ -172,8 +177,8 @@ function checkoutLinePay() {
       .catch(err => {
         console.error("錯誤", err);
         alert('模擬付款 API 呼叫失敗!');
-        window.location.href = "./confirm.html"; // 付款失敗時跳轉到確認頁面
-      });
+        window.location.href = "./cancel.html"; 
+            });
 }
   
 //credit card
@@ -311,7 +316,7 @@ function sendEmail() {
   const user= users.find(u => u.username === loginUser)
   const order = user.orders[user.orders.length - 1]
 
-  // 🔔 發送訂單確認信
+  // 發送訂單確認信
   emailjs.send('service_ztlwryn', 'template_xzl35ni', {
     user_name: user.username,
     email: user.mail,
