@@ -45,6 +45,11 @@ body {
 .header-container .header__navbar {
   position: relative;
 }
+@media only screen and (max-width: 425px) {
+  .header-container .header__navbar {
+    display: none;
+  }
+}
 .header-container .header__navbar-link {
   display: flex;
   justify-content: space-evenly;
@@ -73,6 +78,12 @@ body {
 }
 .header-container .header__btns {
   padding-right: 15px;
+}
+@media only screen and (max-width: 425px) {
+  .header-container .header__btns {
+    width: 100%;
+    text-align: center;
+  }
 }
 .header-container .header__btns button {
   outline: none;
@@ -112,7 +123,7 @@ body {
   gap: 50px;
 }
 .main-container .main .aside {
-  min-width: 230px;
+  min-width: 100px;
   height: 500px;
   position: sticky;
   top: 0;
@@ -213,8 +224,6 @@ body {
 
 .footer-container {
   width: 100%;
-  position: fixed;
-  bottom: 0;
 }
 .footer-container .footer {
   min-height: 150px;
@@ -322,6 +331,11 @@ body {
   align-items: center;
   min-height: 400px;
   margin: 50px 0;
+}
+@media only screen and (max-width: 425px) {
+  .main-container .member {
+    width: 90%;
+  }
 }
 .main-container .member .member-info {
   width: 100%;
@@ -455,6 +469,11 @@ body {
   background-color: #fafafa;
   border-radius: 6.5px;
 }
+@media only screen and (max-width: 425px) {
+  .product .product__container-top {
+    width: 90%;
+  }
+}
 .product .product__container-top .top__img {
   width: 40%;
   min-width: 200px;
@@ -469,6 +488,11 @@ body {
   min-width: 300px;
   width: 60%;
   padding: 50px 100px;
+}
+@media only screen and (max-width: 425px) {
+  .product .product__container-top .top__text {
+    padding: 20px;
+  }
 }
 .product .product__container-top .top__text h3 {
   font-size: 30px;
@@ -511,6 +535,11 @@ body {
 .product .product__container-bottom {
   width: 60%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 425px) {
+  .product .product__container-bottom {
+    width: 90%;
+  }
 }
 .product .product__container-bottom .bottom-tab ul {
   display: flex;
@@ -558,6 +587,12 @@ main.cart .cart-wrapper {
   padding: 10px 50px 60px;
   border-radius: 15px;
   box-shadow: 0 10px 60px rgba(0, 0, 0, 0.25);
+}
+@media only screen and (max-width: 425px) {
+  main.cart .cart-wrapper {
+    width: 90%;
+    padding: 10px 20px;
+  }
 }
 main.cart .cart-wrapper .cart__table {
   display: flex;
@@ -826,6 +861,12 @@ main.cart .cart-total-wrapper .cart-next-step button:active {
   margin: 0 auto;
   background-color: #fff;
   padding: 30px 150px;
+}
+@media only screen and (max-width: 425px) {
+  .confirm .confirm-container .confirm__order {
+    width: 90%;
+    padding: 30px 20px;
+  }
 }
 .confirm .confirm-container .confirm__order p {
   padding: 10px 0;

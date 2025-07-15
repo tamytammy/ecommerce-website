@@ -172,6 +172,7 @@ function checkoutLinePay() {
       .catch(err => {
         console.error("錯誤", err);
         alert('模擬付款 API 呼叫失敗!');
+        window.location.href = "./confirm.html"; // 付款失敗時跳轉到確認頁面
       });
 }
   

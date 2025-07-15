@@ -11,6 +11,10 @@ main.cart{
     padding: 10px 50px 60px;
     border-radius: 15px;
     box-shadow: 0 10px 60px rgba(#000, 0.25);
+    @include respond(small){
+        width: 90%;
+        padding: 10px 20px;
+    }
     .cart__table{
         display: flex;
         justify-content: space-around;

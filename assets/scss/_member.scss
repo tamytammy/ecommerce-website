@@ -97,6 +97,9 @@
         align-items: center;
         min-height: 400px;
         margin: 50px 0;
+        @include respond(small){
+            width: 90%;
+        }
         .member-info{
             width: 100%;
             display: flex;

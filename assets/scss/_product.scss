@@ -14,6 +14,9 @@
             flex-wrap: wrap;
             background-color: #fafafa;
             border-radius: 6.5px;
+            @include respond(small){
+                width: 90%;
+            }
             .top__img{
                 width: 40%;
                 min-width: 200px;
@@ -28,6 +31,9 @@
                 min-width: 300px;
                 width: 60%;
                 padding: 50px 100px;
+                @include respond(small){
+                    padding: 20px ;          
+                }
                 h3{
                     font-size: 30px;
                     padding: 20px 0;
@@ -72,6 +78,9 @@
         &-bottom{
             width: 60%;
             margin: 0 auto;
+            @include respond(small){
+                width: 90%;
+            }
             .bottom-tab{
                 ul{
                     display: flex;

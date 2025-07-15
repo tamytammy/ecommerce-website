@@ -5,6 +5,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+@mixin respond($deive){
+    @if($deive == 'small'){
+        @media only screen and (max-width: 425px){
+            @content;
+        }
+    }@else if($deive == 'medium'){
+        @media only screen and (min-width: 425px) and (max-width: 1024px){
+            @content;
+        }
+    }@else if($deive == 'large'){
+        @media only screen and (min-width: 1024px){
+            @content;
+        }
+    }   
+}
 
 @import '../scss/_index.scss';
 @import '../scss/_member.scss';

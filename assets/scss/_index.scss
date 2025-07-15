@@ -43,6 +43,9 @@ body{
     }
         &__navbar{
             position: relative;
+            @include respond(small){
+                display: none;
+            }
             &-link{
                 display: flex;
                 justify-content: space-evenly;
@@ -73,6 +76,10 @@ body{
         }
         &__btns{
             padding-right: 15px;
+            @include respond(small){
+                width: 100%;
+                text-align: center;
+            }
             button{
                 outline: none;
                 border: none;
@@ -115,7 +122,7 @@ body{
         width: 100%;
         gap: 50px;
         .aside{
-            min-width: 230px;
+            min-width: 100px;
             height: 500px;
             position: sticky;
             top: 0;
@@ -218,8 +225,8 @@ body{
 }
 .footer-container{
     width: 100%;
-    position: fixed;
-    bottom: 0;
+    // position: fixed;
+    // bottom: 0;
     .footer{
         min-height: 150px;
         background-color: #fff;
