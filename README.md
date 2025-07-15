@@ -21,7 +21,6 @@
   - 儲存進歷史訂單
   - 結帳寄送訂單email確認信
 - 待新增功能
-  - 購物車加減按鈕即時更新金額與數量
   - 移除首頁外的搜尋欄位
   - 信用卡API串接
 ---
@@ -32,6 +31,7 @@
 - JavaScript / jQuery
 - Ajax fetch（若有模擬串接 API）
 - localStorage sessionStorage（模擬儲存購物車資料）
+- 第三方套件：EmailJS, beeceptor
 
 ---
 
