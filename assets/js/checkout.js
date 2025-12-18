@@ -139,7 +139,7 @@ function checkoutLinePay() {
   const user = users.find(u => u.username === loginUser)
   console.log(user)
 
-      fetch("https://tamytammy.free.beeceptor.com/checkout-linepay", {
+      fetch("https://d541d30c-94da-4ee6-b208-0c0cfed6053c.mock.pstmn.io", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
